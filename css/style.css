@@ -305,6 +305,7 @@ body.white #broomly-header.scrolled {
   position: absolute;
   bottom: 30px;
   left: 50%;
+  width: 100%;
   transform: translate(-50%);
 }
 #about-grand-room .cover-text h1{
@@ -1092,8 +1093,52 @@ body.experience.custom-white h1 {
   .event-spaces-gallery .event-spaces-gallery-bottom img {
     height: 100%;
   }
+}
 
+@media (min-width: 450px) and (max-width: 1240px) {
+  .custom-container, .container {
+    padding: 0 16px;
+  }
+  #grand-room-header .menu-item, #broomly-header .menu-item {
+    margin: 0;
+  }
 
-
-
+  #experiences-grand-room .experience-box h2, 
+  #experiences-bromley .experience-box h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  #experiences-grand-room h1, #experiences-bromley h1 {
+    font-size: 60px;
+    line-height: 72px;
+  }
+  #experiences-grand-room, #experiences-bromley {
+    padding-top: 190px;
+  }
+  body.experience .enquire-now {
+    padding: 8px 32px;
+    font-size: 24px;
+  }
+  body.experience h1 {
+    font-size: 72px;
+  }
+  body.experience .bottom-cta {
+    margin-top: 4rem;
+  }
+  .section-text-info .capacity-name {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .section-text-info .capacity-number {
+    width: 100px;
+    height: 50px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+  #event-spaces-grand-room .enquire-now,
+  #event-spaces-bromley .enquire-now {
+    padding: 8px 32px;
+    font-size: 24px;
+    line-height: 30px;
+}
 }
