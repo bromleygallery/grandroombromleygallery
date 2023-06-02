@@ -1,5 +1,5 @@
 ---
-permalink: /bromley/experiences/weddings
+permalink: /bromley/experiences/weddings/
 layout: single-experience
 _template: experiences
 current_page: weddings-broomly
