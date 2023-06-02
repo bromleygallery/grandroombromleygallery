@@ -1,0 +1,60 @@
+{% assign current_page = page.current_page %}
+
+{% include head.html %}
+{% include header/bromley-header.html %}
+
+
+<main class="mb-16">
+  <div class="section mb-20 md:mt-24">
+    <div class="container mx-auto">
+      <h1 class="section-title text-center reveal mb-12 md:mb-16"> {{ page.page_title }} </h1>
+      <div class="section-text text-center my-4 reveal">
+        {{ page.text_below_page_title | markdownify}}
+      </div>
+    </div>
+  </div>
+  <div class="section-text-info w-full md:w-1/2 mx-auto">
+    {% if page.whole_space_capacity_title %}
+      <h4 class="text-center mt-6 reveal">{{page.whole_space_capacity_title}}</h4>
+      <div class="flex items-center justify-center reveal md:mt-6">
+        {% for item in page.whole_space_capacity_items %}
+          <div class="capacity-box m-4">
+            <div class="capacity-name mb-4">{{ item.name }}</div>
+            <div class="capacity-number flex items-center justify-center">{{ item.number }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+
+  <div class="bottom-cta mt-16 md:mt-32 mb-20 md:mb-32 reveal">
+    <div class="flex items-center justify-center">
+      <a href="{{page.button_link}}" class="enquire-now"> {{ page.button_text }} </a>
+    </div>
+  </div>
+
+  <div class="event-spaces-gallery container mx-auto ">
+    <div class="event-spaces-gallery-container flex gap-4 flex-wrap ">
+      <div class="event-spaces-gallery-left w-full md:w-3/5 flex flex-col gap-4">
+        <img src="{{ page.first_image }}" alt="Bromley Event Spaces Gallery {{ page.first_image }}">
+        <img src="{{ page.third_image }}" alt="Bromley Event Spaces Gallery {{ page.third_image }}">
+      </div>
+      <div class="event-spaces-gallery-right w-full md:w-2/5 flex flex-col gap-4">
+        <img src="{{ page.second_image }}" alt="Bromley Event Spaces Gallery {{ page.second_image }}">
+        <img src="{{ page.fourth_image }}" alt="Bromley Event Spaces Gallery {{ page.fourth_image }}">
+      </div>
+    </div>
+    <div class="event-spaces-gallery-bottom flex flex-col md:flex-row gap-4 mt-4">
+      <div class="first">
+        <img src="{{ page.fifth_image }}" alt="Bromley Event Spaces Gallery {{ page.fifth_image }}">
+      </div>
+      <div class="second">
+        <img src="{{ page.sixth_image }}" alt="Bromley Event Spaces Gallery {{ page.sixth_image }}">
+      </div>
+    </div>
+  </div>
+</main>
+
+
+{% include footer.html %}

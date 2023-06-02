@@ -1,0 +1,63 @@
+{% assign current_page = page.current_page %}
+
+{% include head.html %}
+{% include header/grand-room-header.html %}
+
+
+<section id="about-cover" class="cover-image mb-12 md:mb-24" style="background-image: url('{{page.cover_image}}');">
+  <div class="cover-text">
+    <h1 class="reveal">{{ page.page_title }}</h1>
+    <h4 class="mt-0 md:mt-4 reveal">{{ page.page_subtitle}}</h4>
+  </div>
+</section>
+
+<main class="mb-16">
+  <div class="section mb-32">
+    <div class="custom-container mx-auto">
+      <h2 class="section-title reveal"> {{ page.events_title }} </h2>
+      <div class="inbetween-line mt-3 mb-6 md:my-6"></div>
+      <div class="section-text reveal">
+        {{ page.events_text | markdownify}}
+      </div>
+    </div>
+  </div>
+  <div class="section mb-32">
+    <div class="custom-container mx-auto">
+      <h2 class="section-title md:text-right reveal"> {{ page.food_title }} </h2>
+      <div class="flex justify-start md:justify-end">
+        <div class="inbetween-line mt-3 mb-6 md:my-6"></div>
+      </div>
+      <div class="section-text md:text-right reveal"> {{ page.food_text | markdownify }} </div>
+
+      <div class="inner-about-section mb-12 md:mb-24 mt-0 md:mt-24">
+        <div class="flex flex-col-reverse md:flex-row items-start justify-between">
+          <div class="text-box">
+            <h3 class="mt-4 md:mt-0 mb-8 md:mb-4 reveal">{{ page.person_proffesion }}<span style="font-family: var(--sohne);"> - </span>{{ page.person_name }}</h3>
+            <div class="text reveal"> {{ page.testimonial_text }} </div>
+          </div>
+          <div class="image reveal">
+            <img src="{{page.person_image}}" alt="{{page.person_name}}">
+          </div>
+        </div>
+      </div>
+
+      <div class="section-image reveal">
+        <img src="{{page.food_image}}" alt="{{ page.food_title }}">
+      </div>
+    </div>
+  </div>
+
+  <div class="section mb-32">
+    <div class="custom-container mx-auto">
+      <h2 class="section-title reveal"> {{ page.beverage_title }} </h2>
+      <div class="inbetween-line mt-3 mb-6 md:my-6"></div>
+      <div class="section-text reveal"> {{page.beverage_text | markdownify }} </div>
+      <div class="section-image reveal">
+        <img src="{{ page.beverage_image }}" alt="{{ page.beverage_title }}">
+      </div>
+    </div>
+  </div>
+</main>
+
+
+{% include footer.html %}

@@ -1,0 +1,42 @@
+{% assign current_page = page.current_page %}
+
+{% include head.html %}
+
+{% if page.main_space_group == 'The Grand Room' %}
+  {% include header/grand-room-header.html %}
+{% else %}
+  {% include header/bromley-header.html %}
+{% endif %}
+
+<main class="mb-20">
+  <!-- cover image -->
+  <div class="cover-image" style="background-image: url('{{page.cover_image}}');"> </div>
+
+  <div class="section mb-20 mt-12 md:mt-24">
+    <div class="container mx-auto">
+      <h1 class="section-title text-center custom-yellow reveal"> {{ page.page_title }} </h1>
+      <div class="section-text text-center my-4 reveal">
+        {{ page.text_below_page_title | markdownify}}
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-cta mt-16 md:mt-32 mb-16 md:mb-24 reveal">
+    <div class="flex items-center justify-center">
+      <a href="{{page.button_link}}" class="enquire-now"> {{ page.button_text }} </a>
+    </div>
+  </div>
+
+  <div class="experience-gallery container mx-auto ">
+    <div class="experience-gallery-container flex gap-4 flex-wrap justify-between">
+      {% for image in page.gallery_images %}
+        <div class="experience-gallery-image-box reveal">
+          <img src="{{ image.image_src }}" alt="{{ image.image_alt }}">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</main>
+
+
+{% include footer.html %}

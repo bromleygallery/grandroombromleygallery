@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.meta_description_title }} | {{ page.main_space_group }}</title>
+
+    {% if page.meta_description %}
+      <meta name="description" content="{{ page.meta_description }}">
+    {% else %}
+      <meta name="description" content="Our objective is to create a limitless atmosphere where guest feel free to connect with each other">
+    {% endif %}
+  
+    <link href="/css/tailwind.css" rel="stylesheet">
+    <link href="/css/animate.css" rel="stylesheet" />
+    <link href="/css/fonts.css" rel="stylesheet">
+    <link href="/css/swiper.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+  </head>
+
+<body id="{{ current_page }}" class="{{ page.shadred_temlate }}">

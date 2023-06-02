@@ -1,0 +1,39 @@
+{% assign current_page = page.current_page %}
+
+{% include head.html %}
+
+{% if page.main_space_group == 'The Grand Room' %}
+  {% include header/grand-room-header.html %}
+{% else %}
+  {% include header/bromley-header.html %}
+{% endif %}
+
+
+<main class="container mx-auto">
+  <h1> {{ page.page_title }} </h1>
+
+  <div class="experiences-container flex flex-col md:flex-row md:gap-8 mt-16 md:mt-24 md:mb-40">
+
+    {% for experience in page.experiences %}
+      <div class="experience-box w-full md:w-1/4 mb-20 md:mb-0">
+        <a href="{{ experience.link }}">
+          <img src="{{ experience.img }}" alt="The Grand Room {{ experience.title }}">
+          <div class="text-center">
+            <h2>
+              {{ experience.title }}
+              <div class="underline-animation"></div>
+            </h2>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+
+  </div>
+</main>
+
+
+
+
+
+
+{% include footer.html %}

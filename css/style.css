@@ -1,0 +1,1080 @@
+@import url('/css/fonts.css');
+
+
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --yellow: #FFB800;
+  --avenir: '"Avenir", sans-serif';
+  --sohne: '"Sohne-Leicht", sans-serif';
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  margin: 0;
+  list-style: none;
+  -webkit-animation: showBody 1s forwards;
+  animation: showBody 1s forwards;
+  scroll-behavior: smooth;
+}
+body.white {
+  background-color: var(--white);
+  color: var(--black);
+}
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
+  height: 0;
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+.custom-yellow {
+  color: var(--yellow);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, .75);
+  transition: all .3s ease-in-out;
+}
+.custom-container {
+  max-width: 1200px;
+}
+.underline-animation {
+  height: 1px;
+  margin-top: -2px;
+  background-color: transparent;
+}
+
+a:hover .underline-animation {
+  background-color: #fff;
+  animation: loadUnderline ease-out forwards 0.5s;
+}
+body.white .underline-animation {
+  height: 2px;
+  margin-top: -1px;
+}
+body.white a:hover .underline-animation {
+  background-color: var(--black);
+}
+.section-title {
+  font-family: Span Compressed;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 77px;
+  letter-spacing: -2px;
+}
+.enquire-now {
+  padding: 26px 58px;
+  font-family: Span Compressed;
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: capitalize;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 65px;
+  border: 2px solid var(--white);
+  transition: all .3s ease-in-out;
+}
+.enquire-now:hover {
+  background-color: var(--black);
+  color: var(--white);
+  box-shadow: 2px 2px 50px white;
+}
+
+
+.inbetween-line {
+  width: 100%;
+  height: 1px;
+  opacity: 0;
+  background-color: #FFFFFF;
+}
+body.white .inbetween-line {
+  background-color: var(--black);
+}
+.animated-line {
+  animation: loadLine 2s ease-out forwards;
+}
+.inbetween-line.animated-line {
+  opacity: 1;
+}
+
+body.white .instagram-footer img{
+  filter: brightness(0);
+}
+
+
+/*   H E A D E R   */
+.header-logo {
+  width: 60px;
+}
+
+#grand-room-header,
+#broomly-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 32px 0;
+  transition: all .3s ease-in-out;
+}
+
+#grand-room-header.scrolled,
+#broomly-header.scrolled {
+  background-color: var(--black); 
+  padding: 16px 0 12px;
+  border-bottom: 1px solid var(--white);
+}
+body.white #grand-room-header.scrolled,
+body.white #broomly-header.scrolled {
+  background-color: var(--white); 
+  border-bottom: 1px solid var(--black);
+}
+#grand-room-header .menu-item,
+#broomly-header .menu-item {
+  margin: 0 40px;
+}
+#grand-room-header .menu-item a,
+#broomly-header .menu-item a{
+  font-family: 'Avenir';
+  font-style: normal;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  display: inline-block;
+}
+#grand-room-header .menu-item-logo img,
+#broomly-header .menu-item-logo img {
+  transition: all .3s ease-in-out;
+}
+#grand-room-header .menu-item-logo:hover img,
+#broomly-header .menu-item-logo:hover img{
+  transform: scale(1.05);
+}
+#grand-room-header .experiences-nav,
+#broomly-header .experiences-nav {
+  background-color: var(--white);
+}
+#grand-room-header .experiences-nav a,
+#broomly-header .experiences-nav a {
+  margin: 0 16px;
+  font-family: Span Compressed;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  display: inline-block;
+  color: var(--yellow);
+}
+#grand-room-header .experiences-nav a:hover .underline-animation,
+#broomly-header .experiences-nav a:hover .underline-animation {
+  background-color: var(--yellow);
+}
+
+
+
+
+@keyframes loadLine {
+  0% { width: 0%; opacity: 0; }
+  40% { width: 0%; opacity: 1; }
+  100% { width: 100%; }
+}
+@keyframes loadUnderline {
+  0% { width: 0%; }
+  20% { width: 0%; }
+  100% { width: 100%; }
+}
+
+
+
+/*  F O O T E R  */
+
+
+/*   L A N D I N G   P A G E   */
+
+#landing {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1000;
+}
+#landing .landing-box {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease-in-out;
+}
+#landing .landing-box img {
+  width: 320px;
+  z-index: 100;
+  opacity: 0.7;
+  transition: all .3s ease-in-out;
+  backdrop-filter: brightness(1);
+}
+#landing  #landing-broomly img {
+  width: 480px;
+}
+#landing .landing-box:hover {
+  width: 55%;
+}
+#landing .landing-box:hover(:not(:hover)) {
+  width: 45%;
+}
+#landing .landing-box:hover .overlay {
+  background-color: rgb(0, 0, 0, 0.25);
+}
+#landing .landing-box > a:hover img{
+  opacity: 1;
+}
+#the-grand-room-cover {
+  position: relative;
+  padding: 180px 0 20px;
+}
+#landing-lk-hospitality-logo {
+  position: absolute;
+  width: 60px;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .3s ease-in-out;
+}
+#landing-lk-hospitality-logo img {
+  top: 20%;
+}
+#landing-broomly:hover ~ #landing-lk-hospitality-logo {
+  left: 47.5%;
+}
+#landing-grand-room:hover ~ #landing-lk-hospitality-logo {
+  left: 52.5%;
+}
+
+
+
+/*  A B O U T    P A G E  */
+#about-cover.cover-image {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  background-position: center bottom;
+}
+
+#about-grand-room .cover-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+}
+#about-grand-room .cover-text h1{
+  font-family: 'Frunchy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 80px;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+#about-grand-room .cover-text h4 {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+#about-grand-room .section-title {
+  color: var(--yellow);
+}
+.section-text,
+.section-text p {
+  font-family: Satoshi;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+}
+#about-grand-room .section-text p {
+  margin-bottom: 1.5em;
+}
+#about-grand-room .section .section-image img{
+  width: 100%;
+}
+.inner-about-section {
+  position: relative;
+}
+.inner-about-section .text-box{
+  width: calc(100% - 250px);
+}
+.inner-about-section .image {
+  width: 220px;
+}
+.inner-about-section .text-box .text {
+  font-family: Satoshi;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+.inner-about-section .text-box h3 {
+  font-family: 'Span Compressed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 30px;
+  color: var(--yellow);
+  text-align: center;
+}
+
+.inner-about-section .image {
+  position: sticky;
+  top: 120px;
+}
+
+
+/*   E X P E R I E N C E S   */
+#experiences-grand-room,
+#experiences-bromley{
+  padding-top: 160px;
+}
+#experiences-grand-room .site-header,
+#experiences-bromley .site-header {
+  background-color: var(--black);
+}
+#experiences-grand-room h1,
+#experiences-bromley h1 {
+  font-family: Span Compressed;
+  font-size: 90px;
+  font-weight: 100;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: -4px;
+}
+#experiences-grand-room h1 {
+  color: var(--yellow);
+}
+#experiences-grand-room .experience-box,
+#experiences-bromley .experience-box {
+  aspect-ratio: 3 / 5;
+}
+#experiences-grand-room .experience-box img,
+#experiences-bromley .experience-box img {
+  width: 100%;
+  height: 100%;
+}
+#experiences-grand-room .experience-box h2,
+#experiences-bromley .experience-box h2 {
+  font-family: 'Span Compressed';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  margin-top: 12px;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  display: inline-block;
+}
+#experiences-grand-room .experience-box img,
+#experiences-bromley .experience-box img {
+  transition: all .3s ease-in-out;
+}
+#experiences-grand-room .experience-box:hover img,
+#experiences-bromley .experience-box:hover img{
+  transform: translateY(-8px);
+}
+
+
+
+/*   E V E N T   S P A C E S   */
+#event-spaces-grand-room {
+  padding-top: 200px;
+}
+#event-spaces-grand-room .section h1 {
+  text-align: center;
+}
+.section-text-info h4{
+  font-family: Satoshi;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.section-text-info .capacity-name {
+  font-family: Satoshi;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.section-text-info .capacity-number {
+  font-family: var(--sohne);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--black);
+  background-color: #D9D9D9;
+  width: 160px;
+  height: 70px;
+}
+#event-spaces-grand-room .enquire-now {
+  line-height: 58px;
+}
+
+
+
+
+
+/*   C O N T A C T   */
+body.contact {
+  padding-top: 140px;
+}
+body.contact .cover-image {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  background-position: center bottom;
+}
+
+body.contact h1 {
+  font-family: Span Compressed;
+  font-size: 90px;
+  font-weight: 100;
+  line-height: 80px;
+  letter-spacing: 0em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+}
+body.contact .section-text,
+body.contact .section-text p {
+  font-family: Satoshi;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 43px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.grand-room-form-container {
+  transition: all .3s ease-in-out;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 160px;
+}
+.grand-room-form-container .custom-bckg {
+  background-color: rgba(233,233,233,1);
+  transition: all .3s ease-in-out;
+}
+.grand-room-form-container input,
+.grand-room-form-container textarea {
+  width: 100%;
+  padding: 6px 20px;
+  resize: none;
+  outline: none;
+  background-color: #C7C4C4;
+  color: #000;
+}
+ .grand-room-form-container input::placeholder {
+  color: rgba(0,0,0,0.5);
+}
+.grand-room-form-container .submit-form input[type="button"]  {
+  width: auto;
+}
+.grand-room-form-container .custom-label {
+  font-family: "Sohne-Leicht", sans-serif;
+}
+
+.grand-room-form-container input[type='checkbox']{
+  width: 40px;
+  accent-color: #FFB800
+
+}
+.grand-room-form-container .btn {
+  padding: 12px 30px;
+  border-radius: 40px;
+  border: 1px solid black;
+  background-color: rgba(233,233,233,1);
+  font-family: Span Compressed;
+  font-size: 24px;
+  color: black;
+  transition: all .3s ease-in-out;
+}
+.grand-room-form-container .btn:hover {
+  box-shadow: 0px 6px 0px black;
+  transform: translateY(-4px);
+}
+
+
+
+
+/*   S I N G L E   E X P E R I E N C E   */
+body.experience {
+  padding-top: 186px;
+}
+body.experience #grand-room-header,
+body.experience #broomly-header {
+  background-color: var(--white);
+  padding: 32px 0 0px;
+}
+body.experience #grand-room-header nav,
+body.experience #broomly-header nav {
+  padding-bottom: 28px;
+  transition: all .3s ease-in-out;
+}
+body.experience #grand-room-header.scrolled,
+body.experience #broomly-header.scrolled {
+  background-color: var(--white);
+  padding: 16px 0 0px;
+}
+body.experience #grand-room-header.scrolled nav,
+body.experience #broomly-header.scrolled nav {
+  padding-bottom: 12px;
+}
+body.experience .experiences-nav {
+  display: block;
+}
+body.experience .site-header .inbetween-line {
+  display: block;
+}
+
+body.experience .cover-image {
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+}
+body.experience h1 {
+  font-size: 90px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+body.experience .section-text p {
+  margin-bottom: 1.5em;
+}
+body.experience .enquire-now {
+  padding: 12px 40px;
+  border-radius: 65px;
+  border: 1px solid black;
+  background-color: rgba(233,233,233,1);
+  font-family: Span Compressed;
+  font-size: 48px;
+  color: black;
+  transition: all .3s ease-in-out;
+  background: white;
+}
+body.experience .enquire-now:hover {
+  box-shadow: 0px 6px 0px black;
+  transform: translateY(-4px);
+}
+body.experience .experience-gallery .experience-gallery-image-box:nth-child(3n+1){
+  width: 25%;
+}
+body.experience .experience-gallery .experience-gallery-image-box:nth-child(3n+2){
+  width: calc(50% - 2em);
+}
+body.experience .experience-gallery .experience-gallery-image-box:nth-child(3n+3){
+  width: 25%;
+}
+body.experience .experience-gallery .experience-gallery-image-box img{
+  transition: all .3s ease-in-out;
+}
+body.experience .experience-gallery .experience-gallery-image-box img:hover {
+  transform: scale(1.04);
+}
+body.experience .experience-gallery .experience-gallery-image-box img{
+  width: 100%;
+  height: 100%;
+}
+
+/* Bromley Experience */
+body.custom-white {
+  background-color: #F5F5F5;
+}
+body.custom-white #grand-room-header.scrolled, 
+body.custom-white #broomly-header.scrolled {
+  background-color: #F5F5F5;
+}
+body.custom-white #grand-room-header, 
+body.experience.custom-white #broomly-header {
+  background-color: #F5F5F5;
+}
+body.custom-white #grand-room-header .experiences-nav, 
+body.custom-white #broomly-header .experiences-nav {
+  background-color: #F5F5F5;
+}
+body.custom-white #grand-room-header .experiences-nav a, 
+body.custom-white #broomly-header .experiences-nav a {
+  color: var(--black);
+}
+body.custom-white #grand-room-header .experiences-nav a:hover .underline-animation, 
+body.custom-white #broomly-header .experiences-nav a:hover .underline-animation {
+  background-color: var(--black);
+}
+body.experience.custom-white h1 {
+  color: var(--black);
+}
+
+
+
+/*  B R O M L E Y   E V E N T  S P A C E S   */
+#event-spaces-bromley {
+  padding-top: 130px;
+}
+#event-spaces-bromley h1 {
+  font-family: Span Compressed;
+  font-size: 90px;
+  font-weight: 100;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: -4px;
+}
+#event-spaces-bromley .section-text-info .capacity-number {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+}
+#event-spaces-bromley .enquire-now {
+  border: 1px solid var(--black);
+  line-height: 1.15;
+}
+#event-spaces-bromley .enquire-now:hover {
+  background-color: var(--white);
+  color: var(--black);
+  box-shadow: 0px 6px 0px black;
+  transform: translateY(-4px);
+}
+
+.event-spaces-gallery .event-spaces-gallery-left{
+  width: calc(56% - 0.5em);
+}
+.event-spaces-gallery .event-spaces-gallery-right{
+  width: calc(44% - 0.5em);
+}
+.event-spaces-gallery .event-spaces-gallery-bottom {
+  width: 100%;
+}
+.event-spaces-gallery .event-spaces-gallery-bottom img {
+  height: 100%;
+}
+
+
+/*  B R O M L E Y   C O N T A C T  */
+#contact-bromley h1 {
+  color: var(--black);
+}
+
+
+/*  B R O M L E Y    A B O U T  */
+#about-bromley .overlay {
+  background-color: rgba(0,0,0,0.3);
+}
+#about-bromley .cover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#about-bromley .section:nth-child(1) p:nth-child(1) {
+  margin-bottom: 1.5em;
+}
+#about-bromley .artist-text {
+  width: calc(100% - 430px);
+}
+#about-bromley .artist-image {
+  width: 390px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 450px) {
+  .container, 
+  .custom-container {
+    padding: 0 16px;
+  }
+  .header-logo {
+    width: 50px;
+  }
+
+  /*  MOBILE NAV */
+  #mobileMenu {
+    position: fixed;
+    z-index: 100;
+    inset: 0;
+    width: 100vw;
+    left: 110vw;
+    background-color: #000000;
+    color: var(--white);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+  #mobileMenu.menu--opened {
+    left: 0;
+    opacity: 1;
+  }
+  body.white #mobileMenu {
+    background-color: white;
+    color: var(--black);
+  }
+  body.white.custom-white #mobileMenu {
+    background-color: #F5F5F5;
+  }
+
+  .nav-toggle {
+    width: 32px;
+    margin-right: 4px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10000;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav-toggle--closed {
+    width: 32px;
+    height: 25px;
+  }
+  .burger-line {
+    height: 4px;
+    border-radius: 10px;
+    background-color: var(--white);
+    width: 32px;
+    transition: all 0.5s ease-in-out;
+  }
+  body.white .burger-line{
+    background-color: var(--black);
+  }
+
+  .burger-line:nth-child(2) {
+    margin: 6px 0;
+  }
+
+  .close-nav .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .close-nav .burger-line:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(45deg);
+    -ms-transform: translateY(10px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .close-nav .burger-line:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+    -ms-transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  #mobileMenu .mobile-menu-item {
+    font-size: 24px;
+    padding: 6px 0;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  #mobileMenu .mobile-menu-item.submenu {
+    padding-left: 32px;
+  }
+  
+
+
+  /*   L A N D I N G   */
+  #landing .landing-box {
+    height: 50%;
+  }
+  #landing .landing-box a {
+    width: 100%;
+  }
+  #landing-lk-hospitality-logo {
+    top: 50%;
+  }
+  #landing-lk-hospitality-logo img {
+    width: 60px;
+  }
+  #landing .landing-box img {
+    width: 50%;
+  }
+  #landing #landing-broomly img {
+    width: 50%;
+  }
+  #landing .landing-box:hover {
+    width: 100%;
+  }
+  #landing .landing-box .overlay {
+    background-color: rgb(0, 0, 0, 0.6);
+  }
+  #landing .landing-box img {
+    opacity: 1 !important;
+  }
+  #landing #landing-grand-room.landing-box img{
+    width: 160px;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  #landing #landing-broomly.landing-box img{
+    width: 240px;
+    margin-left: 40px;
+    margin-right: auto;
+  }
+
+
+
+  /*   A B O U T   */
+
+  #about-grand-room .cover-text {
+    width: 100%;
+  }
+  #about-grand-room .cover-text h1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .section-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .section-text, .section-text p,
+  .inner-about-section .text-box .text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .inner-about-section .image {
+    position: static;
+    width: 100%;
+  }
+  .inner-about-section .text-box {
+    width: 100%;
+  }
+  .inner-about-section .text-box h3 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .inner-about-section .text-box .text {
+    text-align: left;
+  }
+
+  /*   E X P E R I E N C E S   */
+  #experiences-grand-room, #experiences-bromley {
+    padding-top: 140px;
+  }
+  #experiences-grand-room h1, 
+  #experiences-bromley h1 {
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -2px;
+  }
+  #experiences-grand-room .experience-box, 
+  #experiences-bromley .experience-box {
+    aspect-ratio: auto;
+  }
+
+
+  /*  S I N G L E  E X P E R I N C E   */
+  body.experience {
+    padding-top: 140px;
+  }
+  body.experience h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  body.experience #grand-room-header .inbetween-line, 
+  body.experience #broomly-header .inbetween-line {
+    margin-top: 10px;
+  }
+  body.experience #grand-room-header, 
+  body.experience #broomly-header {
+    padding: 16px 0 0;
+  }
+
+
+  body.experience .enquire-now {
+    padding: 8px 32px;
+    font-size: 24px;
+  }
+
+  #grand-room-header .experiences-nav a, 
+  #broomly-header .experiences-nav a {
+    font-size: 24px;
+    margin: 0 16px 0 0;
+  }
+
+  body.experience .experience-gallery .experience-gallery-image-box:nth-child(3n+1){
+    width: 100%;
+  }
+  body.experience .experience-gallery .experience-gallery-image-box:nth-child(3n+2){
+    width: 100%;
+  }
+  body.experience .experience-gallery .experience-gallery-image-box:nth-child(3n+3){
+    width: 100%;
+  }
+  body.experience .experience-gallery .experience-gallery-image-box img{
+    transition: none
+  }
+  body.experience .experience-gallery .experience-gallery-image-box img:hover {
+    transform: scale(1);
+  }
+
+
+
+  #grand-room-header, #broomly-header {
+    padding: 24px 0;
+  }
+  /*  E V E N T   S P A C E S */
+  #event-spaces-grand-room {
+    padding-top: 160px;
+  }
+  #event-spaces-grand-room .enquire-now {
+    padding: 8px 32px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .section-text-info .capacity-name {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .section-text-info .capacity-number {
+    width: 100px;
+    height: 50px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+
+
+  /*  C O N T A C T  */
+  body.contact {
+    padding-top: 120px;
+  }
+  body.contact h1 {
+    font-size: 60px;
+    letter-spacing: -2px;
+  }
+  body.contact .section-text, body.contact .section-text p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .grand-room-form-container {
+    padding: 0 16px;
+    margin-bottom: 80px;
+  }
+  .grand-room-form-container .btn {
+    line-height: 28px;
+  }
+
+  .animated-line {
+    animation: loadLine 1.3s ease-out forwards;
+  }
+
+
+
+
+  /*  B R O M L E Y */
+  #about-bromley .cover-text {
+    position: absolute;
+    bottom: 50px;
+    top: unset;
+    left: 50%;
+    transform: translateX(-40%);
+  }
+  #about-bromley .artist-text, 
+  #about-bromley .artist-image {
+    width: 100%;
+  }
+
+  #experiences-bromley h1 {
+    font-size: 44px;
+    line-height: 48px;
+    letter-spacing: 0px;
+  }
+
+
+  #event-spaces-bromley {
+    padding-top: 160px;
+  }
+  #event-spaces-bromley .enquire-now {
+    padding: 8px 32px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  #event-spaces-bromley h1 {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0px;
+  }
+  .section-text-info .capacity-name {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .section-text-info .capacity-number {
+    width: 100px;
+    height: 50px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  #event-spaces-bromley {
+    padding-top: 130px;
+  }
+
+  .event-spaces-gallery .event-spaces-gallery-left{
+    width: 100%
+  }
+  .event-spaces-gallery .event-spaces-gallery-right{
+    width: 100%
+  }
+  .event-spaces-gallery .event-spaces-gallery-bottom {
+    width: 100%;
+  }
+  .event-spaces-gallery .event-spaces-gallery-bottom img {
+    height: 100%;
+  }
+
+
+
+
+}

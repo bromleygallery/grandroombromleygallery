@@ -1,0 +1,82 @@
+{% assign current_page = page.current_page %}
+
+{% include head.html %}
+
+{% if page.main_space_group == 'The Grand Room' %}
+  {% include header/grand-room-header.html %}
+{% else %}
+  {% include header/bromley-header.html %}
+{% endif %}
+
+<main class="mb-16">
+  <!-- cover image -->
+  <div class="cover-image" style="background-image: url('{{page.cover_image}}');"> </div>
+
+  <div class="section mb-12 md:mb-20 mt-12 md:mt-20">
+    <div class="custom-container mx-auto">
+      <h1 class="section-title custom-yellow reveal"> {{ page.page_title }} </h1>
+      <div class="section-text reveal text-center my-4">
+        {{ page.text_below_page_title | markdownify}}
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-10 md:mb-20 grand-room-form-container reveal">
+    <form action="https://formsubmit.co/9c71fef3575c9c777ec5a1e62343e486" target="_blank" method="POST" class="flex flex-col mt-auto">
+      <div class="custom-bckg px-6 py-10 md:p-10">
+        <div class="flex flex-col md:flex-row items-start justify-center mb-4">
+          <div class="w-full md:w-1/4">Name:</div>
+          <div class="w-full md:w-3/4">
+            <input type="text" name="name" class="form-control" placeholder="Your Full Name" required>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-start justify-center mb-4">
+          <div class="w-full md:w-1/4">Phone Number:</div>
+          <div class="w-full md:w-3/4">
+            <input type="text" name="phone" class="form-control" placeholder="Your Phone Number" required>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-start justify-center mb-4 md:mb-10">
+          <div class="w-full md:w-1/4 custom-label">Email:</div>
+          <div class="w-full md:w-3/4">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-start justify-center mb-4">
+          <div class="w-full md:w-1/4 custom-label">Date of Event:</div>
+          <div class="w-full md:w-3/4">
+            <input id="dateInput" type="date" name="date" class="form-control" required>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-start justify-center mb-4">
+          <div class="w-full md:w-1/4 custom-label">Additional information:</div>
+          <div class="w-full md:w-3/4">
+            <textarea id="dateInput" type="date" name="message" placeholder="dd-mm-yyyy" class="form-control" rows="3" maxlength="320"> </textarea>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row items-start justify-center">
+          <div class="hidden md:block md:w-1/4 custom-label">&nbsp;</div>
+          <div class="w-full md:w-3/4 flex items-center justify-start">
+            <input type="checkbox" id="recive-emails" name="Receive email updates">
+            <label for="recive-emails">Receive email updates of our latest offers</label>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 md:mt-10 flex flex-col-reverse md:flex-row justify-end items-center">
+        <!-- <a class="btn" href="/brochure/The Grand Room Brochure May 2023 - DIGI.pdf" download> 
+          Download Brochure
+        </a> -->
+
+        <div class="submit-form reveal">
+          <button class="btn btn-submit enquire-now" type="submit">Enquire Now </button>
+        </div>
+      </div>
+
+      <input type="hidden" name="_subject" value="The Grand Room Form Submission!">
+      <input type="hidden" name="_next" value="https://www.lkhevents.com.au/brochure/The Grand Room Brochure May 2023 - DIGI.pdf">
+    </form>      
+  </div>
+</main>
+
+
+{% include footer.html %}

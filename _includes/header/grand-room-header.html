@@ -1,0 +1,154 @@
+<header id="grand-room-header" class="site-header">
+  <nav class="hidden md:block container mx-auto">
+    <ul class="flex flex-col md:flex-row items-center justify-between">
+      <li class="menu-item">
+        <a href="/about">
+          About us
+          <div class="underline-animation"></div>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="/experiences">
+          experiences
+          <div class="underline-animation"></div>
+        </a>
+      </li>
+      <li class="menu-item-logo">
+        <a href="/">
+          {% if page.shadred_temlate contains "white" %}
+            <img src="/assets/images/LK-Hospitality-Logo-black.png" alt="LK Hospitality Logo" class="header-logo">
+          {% else %}
+            <img src="/assets/images/LK-Hospitality-Logo-white.png" alt="LK Hospitality Logo" class="header-logo">
+          {% endif %}
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="/event-spaces">
+          Event spaces
+          <div class="underline-animation"></div>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="/contact">
+          Contact
+          <div class="underline-animation"></div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Mobile -->
+  <div class="container mx-auto">
+    <div class="flex items-center justify-between md:hidden">
+      <div class="mobile-logo">
+        <a href="/">
+          {% if page.shadred_temlate contains "white" %}
+            <img src="/assets/images/LK-Hospitality-Logo-black.png" alt="LK Hospitality Logo" class="header-logo">
+          {% else %}
+            <img src="/assets/images/LK-Hospitality-Logo-white.png" alt="LK Hospitality Logo" class="header-logo">
+          {% endif %}
+        </a>
+      </div>
+      <div class="nav-toggle" aria-label="Open menu" type="button">
+        <div class="burger-line"> </div>
+        <div class="burger-line"> </div>
+        <div class="burger-line"> </div>
+      </div>
+    </div>
+  </div>
+  <!-- end mobile -->
+  <div class="inbetween-line animated-line hidden"></div>
+  <div class="experiences-nav hidden">
+    <div class="overflow-x-scroll md:overflow-x-hidden md:container mx-auto flex items-center justify-between">
+      <a href="/experiences/weddings/">
+        Weddings
+        <div class="underline-animation"></div>
+      </a>
+      <a href="/experiences/corporate/">
+        Corporate
+        <div class="underline-animation"></div>
+      </a>
+      <div class="select-none">&nbsp;</div>
+      <a href="/experiences/social/">
+        Social
+        <div class="underline-animation"></div>
+      </a>
+      <a href="/experiences/bespoke/">
+        Bespoke
+        <div class="underline-animation"></div>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<nav id="mobileMenu" class="block md:hidden">
+  <div class="container mx-auto my-4">
+    <div class="flex items-center justify-between md:hidden">
+      <div class="mobile-logo">
+        <a href="/">
+          {% if page.shadred_temlate contains "white" %}
+            <img src="/assets/images/LK-Hospitality-Logo-black.png" alt="LK Hospitality Logo" class="header-logo">
+          {% else %}
+            <img src="/assets/images/LK-Hospitality-Logo-white.png" alt="LK Hospitality Logo" class="header-logo">
+          {% endif %}
+        </a>
+      </div>
+      <div class="close-nav mr-1">
+        <div class="burger-line"> </div>
+        <div class="burger-line"> </div>
+        <div class="burger-line"> </div>
+      </div>
+    </div>
+    <ul class="mt-8">
+      <div class="mobile-menu-item">
+        <a href="/about">
+          About us
+          <div class="underline-animation"></div>
+        </a>
+      </div>
+      <div class="mobile-menu-item">
+        <a href="/experiences">
+          experiences
+          <div class="underline-animation"></div>
+        </a>
+      </div>
+      <div class="mobile-menu-item submenu">
+        <a href="/experiences/weddings/">
+          Weddings
+          <div class="underline-animation"></div>
+        </a>
+      </div>
+      <div class="mobile-menu-item submenu">
+        <a href="/experiences/corporate/">
+          Corporate
+          <div class="underline-animation"></div>
+        </a>
+      </div>
+      <div class="mobile-menu-item submenu">
+        <a href="/experiences/social/">
+          Social
+          <div class="underline-animation"></div>
+        </a>
+      </div>
+      <div class="mobile-menu-item submenu">
+        <a href="/experiences/bespoke/">
+          Bespoke
+          <div class="underline-animation"></div>
+        </a>
+      </div>
+      <div class="mobile-menu-item">
+        <a href="/event-spaces">
+          Event spaces
+          <div class="underline-animation"></div>
+        </a>
+      </div>
+      <div class="mobile-menu-item">
+        <a href="/contact">
+          Contact
+          <div class="underline-animation"></div>
+        </a>
+      </div>
+    </ul>
+  </div>
+</nav>

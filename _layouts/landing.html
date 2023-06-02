@@ -1,0 +1,37 @@
+{% assign current_page = 'landing' %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Grand Room | Bromley Gallery & Event Center</title>
+  <meta name="description" content="Our objective is to create a limitless atmosphere where guest feel free to connect with each other">
+
+  <link href="/css/tailwind.css" rel="stylesheet">
+  <link href="/css/animate.css" rel="stylesheet" />
+  <link href="/css/fonts.css" rel="stylesheet">
+  <link href="/css/swiper.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body id="{{ current_page }}" class="{{ page.shadred_temlate }}">
+  <main id="landing" class="flex flex-col-reverse md:flex-row justify-between items-center">
+    <div id="landing-grand-room" class="landing-box w-full md:w-1/2" style="background-image: url({{page.grand_room_img}});">
+      <a href="/about">
+        <div class="overlay"></div>
+        <img src="{{page.grand_room_logo}}" alt="The Grand room">
+      </a>
+    </div>
+    <div id="landing-broomly" class="landing-box w-full md:w-1/2" style="background-image: url({{page.broomly_img}});">
+      <a href="/bromley/about">
+        <div class="overlay"></div>
+        <img src="{{page.broomly_logo}}" alt="Broomly gallery & events space">
+      </a>
+    </div>
+    <div id="landing-lk-hospitality-logo">
+      <img src="/assets/images/LK-Hospitality-Logo-white.png" alt="LK Hospitality Logo">
+    </div>
+  </main> 
+
+  <script src="/js/main.js" type="module"></script>
+</body>
