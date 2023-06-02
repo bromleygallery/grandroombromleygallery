@@ -14,8 +14,9 @@ body {
   color: var(--white);
   margin: 0;
   list-style: none;
-  -webkit-animation: showBody 1s forwards;
-  animation: showBody 1s forwards;
+  opacity: 0;
+  -webkit-animation: showBody 2s forwards;
+  animation: showBody 2s forwards;
   scroll-behavior: smooth;
 }
 body.white {
@@ -197,7 +198,25 @@ body.white #broomly-header.scrolled {
   20% { width: 0%; }
   100% { width: 100%; }
 }
+@keyframes showBody {
+  40% {
+    opacity: 0;
+  }
 
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes showBody {
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 
 
 /*  F O O T E R  */
