@@ -18,7 +18,7 @@ text_below_page_title: >-
 
   With four key spaces, each customisable based on your requirements, our rooms can accommodate small intimate boardroom meetings or be transformed to house large functions and conferences. Our space offers custom-made, contemporary furniture and the latest technology and audiovisual equipment.
 button_text: enquire now
-button_link: '#'
+button_link: '/contact/#contact-form-cta'
 gallery_images: 
   - image_src: '/assets/images/The Grand Room Corporate Gallery 1.jpg'
     image_alt: 'The Grand Room Corporate Gallery 1'
