@@ -81,8 +81,26 @@ import SmoothScroll from './smoothScroll.js'
     }
   })
   
+  if (window.location.hash == '#contact-form-cta' && document.getElementById('contact-form-cta')) {
+    const contactSection = document.getElementById('contact-form-cta')
+    const dims = contactSection.getBoundingClientRect();
 
-  document.body.addEventListener('onload', init())
+      
+    setTimeout(() => {
+      window.scrollTo(window.scrollX, dims.top - 120);
+    }, 1000)
+
+    setTimeout(() => {
+      document.body.addEventListener('onload', init())
+    }, 2500)
+
+  }
+  else {
+    document.body.addEventListener('onload', init())
+
+  }
+
+  
 
   window.onload = () => {
     window.scrollTo(0, 0);

@@ -12,12 +12,15 @@ meta_description: Our objective is to create a limitless atmosphere where guest 
 cover_image: "/assets/images/Broomly Social Experience Cover.jpg"
 page_title: Social Events
 text_below_page_title: >-
-  Celebrate a milestone or reflect on the achievement of a loved one in the one of the city’s most unique venues. Whatever the cause for celebration, we have the space to spotlight your most treasured moments.
+  At Bromley Gallery, we offer an extraordinary venue for celebrating milestones and cherishing the accomplishments of your loved ones. No matter the reason for your celebration, we have the perfect space to showcase your most treasured moments.
 
 
-  Whether it be an intimate affair for a small group of friends or family or a festive occasion shared with many, our team can help create a flawless celebration. Choose from a seated (up to 150 guests) or cocktail style (up to 300 guests) event with mouthwatering menus served with delicate precision to meet your unique requirements.
+  Whether you're planning an intimate gathering with a small group of friends and family or a joyous occasion shared with many, our dedicated team is here to ensure a flawless celebration. Our talented culinary team will craft mouthwatering menus with delicate precision, tailored to meet your unique requirements.
+
+
+  Let us create an unforgettable social event that reflects your style and honours the significance of the occasion. Experience the unparalleled ambiance and exceptional service at Bromley Gallery, where your most cherished moments will shine.
 button_text: enquire now
-button_link: '#'
+button_link: '/bromley/contact/#contact-form-cta'
 
   
 ---

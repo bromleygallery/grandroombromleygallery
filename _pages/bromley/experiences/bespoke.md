@@ -12,12 +12,13 @@ meta_description: Our objective is to create a limitless atmosphere where guest 
 cover_image: "/assets/images/Broomly Bespoke Experience Cover.jpg"
 page_title: Bespoke
 text_below_page_title: >-
-  No matter your reason for an event, our space and offering are entirely flexible. No matter your style, our approach is highly customised to suit your specific needs.
+  At Bromley Gallery, we understand that every event is unique, and we pride ourselves on our flexibility and customisation. No matter the purpose of your event, our space and offerings can be tailored to your exact specifications. Whether you have a specific theme, ambiance, or style in mind, our approach is highly personalised to suit your individual needs.
+  Our dedicated team will collaborate closely with you to ensure that every detail of your event is thoughtfully curated, resulting in truly memorable and one-of-a-kind moments that will leave a lasting impression on both you and your guests. With our ability to accommodate guest numbers ranging up to 60 for seated events, and up to 120 for cocktail-style gatherings, we have the versatility to cater to events of various sizes.
 
 
-  We will work closely with you to produce truly memorable and unique moments that you and your guests won’t easily forget. Offering experiences from 2 up to 150 guests seated and up to 300 guests cocktail style, we invite you to contact us today to learn more.
+  Contact us today to explore the possibilities and learn more about how Bromley Gallery can create a bespoke event experience that exceeds your expectations.
 button_text: enquire now
-button_link: '#'
+button_link: '/bromley/contact/#contact-form-cta'
 
   
 ---

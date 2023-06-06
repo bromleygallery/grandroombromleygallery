@@ -9,7 +9,7 @@ meta_description_title: Experiences
 meta_description: Our objective is to create a limitless atmosphere where guest feel free to connect with each other
 
 page_title: >-
-  WELCOME TO SOUTH YARRA’S 
+  WELCOME TO SOUTH YARRA’S <br />
   NEWEST PLAYGROUND
 
 experiences:

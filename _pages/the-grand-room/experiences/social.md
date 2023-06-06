@@ -17,7 +17,7 @@ text_below_page_title: >-
   
   Whether it be an intimate affair for a small group of friends or family or a festive occasion shared with many, our team can help create a flawless celebration. Choose from a seated (up to 150 guests) or cocktail style (up to 300 guests) event with mouthwatering menus served with delicate precision to meet your unique requirements.
 button_text: enquire now
-button_link: '#'
+button_link: '/contact/#contact-form-cta'
 gallery_images: 
   - image_src: '/assets/images/The Grand Room Social Gallery 1.jpg'
     image_alt: 'The Grand Room Social Gallery 1'

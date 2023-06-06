@@ -20,7 +20,7 @@ whole_space_capacity_items:
     number: 60
 
 button_text: enquire now
-button_link: '#'
+button_link: '/bromley/contact/#contact-form-cta'
 
 first_image: '/assets/images/Bromley Event Spaces Gallery 1.jpg' # 1179 / 788
 second_image: '/assets/images/Bromley Event Spaces Gallery 2.jpg' # 926 / 908

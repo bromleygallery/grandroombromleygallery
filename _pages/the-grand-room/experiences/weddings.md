@@ -24,7 +24,7 @@ text_below_page_title: >-
 
   So let us take you on an exceptional journey that will leave a lasting impression on you and your guests.
 button_text: enquire now
-button_link: '#'
+button_link: '/contact/#contact-form-cta'
 gallery_images: 
   - image_src: '/assets/images/The Grand Room Weddings Gallery 1.jpg'
     image_alt: 'The Grand Room Weddings Gallery 1'

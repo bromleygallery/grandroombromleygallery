@@ -69,7 +69,7 @@ list_of_rooms:
         number: 40
 
 button_text: enquire now
-button_link: '#'
+button_link: '/contact/#contact-form-cta'
 ---
 
 
