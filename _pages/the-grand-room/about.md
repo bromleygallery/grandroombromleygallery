@@ -1,42 +1,51 @@
 ---
 permalink: /about/
-layout: about-grand-room
-_template: about-grand-room
-current_page: about-grand-room
+layout: about
+_template: about
+current_page: about
 main_space_group: The Grand Room
 shadred_temlate: about
+header: grand_room
 
 meta_description_title: About us
 meta_description: Our objective is to create a limitless atmosphere where guest feel free to connect with each other
 
-cover_image: "/assets/images/Grand Room cover.jpg"
-page_title: The grand Room
-page_subtitle: opening May 2023
-events_title:  LK Hospitality Events
-events_text:  >-
-  Our objective is to create a limitless atmosphere where guest feel free to connect with each other. A place where memories can be lived, history can be written and togetherness will be celebrated.
+cover_image: "/assets/images/Grand Room About.jpg"
+page_title: WELCOME TO SOUTH YARRA’S 
 
 
-  A bold, dynamic and limitless venue that elaborates with a network of trendy, innovative and energetic Melbourne professionals. The ambition is to unfold a authentic voice in the event industry, exploring and surprising with its guests by using our knowledge, creativity, don’t hold-back attitude and our passion for quality food and high end service.
+  *NEWEST* PLAYGROUND
+
+first_section_image: '/assets/images/The Grand Room About image 1.jpg'
+above_title_first_section: Presenting..
+first_section_title: The Grand Room
+first_section_text: Welcome to South Yarra's newest playground.
+
+  Located in the prestigious Capitol Grand, our sophisticated spaces offer limitless opportunities to create one-of-a-kind experiences.
+
+
+  Our ambition is to use our knowledge, creativity & passion for quality and high-end service to provide our guests with innovative & tailored events from intimate birthday celebrations to opulent weddings, from memorable meetings and networking events to lively cocktail parties, and everything in between.
+
+
+  Our dedicated hospitality teams & event production specialists are on hand to help you plan and deliver an impressive event beyond your wildest imagination.
+first_section_link_url: '#'
+first_section_link_text: Find out more
+
+second_section_image: '/assets/images/The Grand Room About image 2.jpg'
 food_title:  The Food
 food_text:  >-
-  Your event is in impeccably experienced and imaginative hands Madison Park (New York), and Vue de Monde. Allow our creative and thoughtful team to realise your event beyond your wildest imagination. Experience the epitome of indulgent dining at The Grand Room and Bromley Gallery, where our focus is on providing the finest culinary creations using Victorian quality produce.
-          
-
-  Our expert chefs curate a menu that is versatile and abundant, with seasonal dishes taking pride of place, complemented with the option of canapés, substantial plates or specialty stations. We take pride in our commitment to using only the highest quality ingredients, ensuring that every bite is an indulgence. Join us at The Grand Room for an unforgettable dining experience that showcases the artistry of our chefs and the quality of our ingredients.
-person_proffesion: CULINARY DIRECTOR
-person_name: STEPHEN NAIRN
+  Our expert chefs have curated menus that are versatile and abundant with a focus on quality Victorian produce. We take pride in our commitment to using only the best the region has to offer, and we work directly with local farmers & growers to ensure we honour the seasonality of produce. Led by our Culinary Director, your event is in impeccably experienced and imaginative hands. Allow our creative team to realise your wildest imagination and compose menus to complement any event.
+person_proffesion: Culinary Director
+person_name: Stephen Nairn
 person_image: /img/stephen_nairn.png
 testimonial_text: >-
-  Stephen Nairn, originally from Scotland, joined LK Hospitality in 2018 as Executive Chef and has now taken on the role of Culinary Director, overseeing a team of 120 employees. With a 20-year career in the industry, Nairn is highly respected in the Australian hospitality community and was a finalist for The Age Good Food Guide's Chef Of The Year in 2023. His restaurants, Omnia Bistro & Bar and Yugen Dining, have both been awarded two chef hats. Nairn's culinary journey began in Scotland, where he honed his skills in renowned European kitchens before receiving a scholarship in New York and working at Eleven Madison Park. Intrigued by Melbourne's dining scene, he made Australia his home, rising from sous chef to Executive Chef at Vue de monde and later serving as head chef at Estelle by Scott Pickett. Nairn's desire for creative exploration led him to join LK Hospitality, where he oversees the food and beverage concepts for Capitol Grand in South Yarra, including Omnia Bistro & Bar, Yūgen Dining, Yūgen Tea Bar, The Grand Room, and Bromley Gallery. With a deep appreciation for seasonality and quality ingredients, Nairn's commitment to culinary excellence shines through in the delightful dishes he creates for his guests.
-food_image: /assets/images/230413 The Grand Room1584  Lo Res 1.jpg
+  Hailing from Scotland, Stephen’s Nairn’s 20-year career in the Hospitality industrybegan at home, where he honed his skills in renowned European kitchens before receiving a scholarship to work at Eleven Madison Park in New York. Intrigued by Melbourne's dining scene, he made Australia his home, rising to Executive Chef at Vue de Monde and later serving as Head Chef at Estelle by Scott Pickett.
+  
+  
+  Nairn's desire for creative exploration led him to join LK Hospitality in 2018 to oversee a portfolio of restaurants including Omnia Bistro & Bar and Yūgen Dining (both awarded Two Chef Hats), as well as Yūgen Tea Bar, The Grand Room, and Bromley Gallery. Nairn was a finalist for The Age Good Food Guide's “Chef of The Year” in 2023. With a deep appreciation for seasonality and quality ingredients, his commitment to culinary excellence shines through in the delightful dishes he creates for his guests.
 beverage_title: The Beverages
 beverage_text:  >-
-    At our events, we don’t just offer beverages, we provide an unforgettable experience. Our beverage packages feature only the finest wines, meticulously curated by our in-house sommeliers.
-
-          
-    From intimate gatherings to large-scale events, our beverage packages are designed to cater to your needs and exceed your expectations.
-beverage_image: /assets/images/230413 The Grand Room2544 1.jpg
+    Our menus are matched with an equally thoughtful collection of the finest wines, meticulously curated by our in-house sommeliers. From intimate gatherings to large-scale events, our beverage packages are designed to cater to your needs and exceed your guests expectations, providing an unforgettable experience.
 ---
 
 

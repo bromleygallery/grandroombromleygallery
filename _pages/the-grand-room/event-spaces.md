@@ -1,16 +1,22 @@
 ---
 permalink: /event-spaces/
-layout: event-spaces-grand-room
-_template: event-spaces-grand-room
-current_page: event-spaces-grand-room
+layout: event-spaces
+_template: event-spaces
+current_page: event-spaces
 main_space_group: The Grand Room
+shadred_temlate: grand-room
+header: grand_room
 
 meta_description_title: Event Spaces
 meta_description: From weddings, corporate events,  birthday parties, private dinners and anything in between, ourimaginative and versatile spaces can be transformed for any occasion.
 
-cover_image: "/assets/images/Grand Room cover.jpg"
-page_title: Event Spaces
-text_below_page_title: From weddings, corporate events, media and product launches, birthday parties, private dinners and anything in between, our imaginative and versatile spaces can be transformed to offer a spectacular setting for any occasion. Vast floor to ceiling windows are a magnet for natural light and invite uninterrupted views of the world outside to dazzle your guests. Choose from four incredible spaces to enjoy, independently or connected, for one seamless event. Our creative team will work with you to plan and execute an event as unique and memorable as you.
+cover_image: "/assets/images/Grand Room Event Spaces Cover.jpg"
+page_title: OUR VERSATILE SPACES
+text_below_cover_image: >-
+  From weddings, corporate events, media and product launches, birthday parties, private dinners and anything in between, our imaginative and versatile spaces can be transformed to offer a spectacular setting for any occasion. 
+
+
+  Choose from four incredible spaces to enjoy, independently or connected, for one seamless event. Our creative team will work with you to plan and execute an event as unique and memorable as you.
 
 
 list_of_rooms:
@@ -20,7 +26,7 @@ list_of_rooms:
 
 
       With wrap around views and ability to create two intimate spaces within the venue, the possibilities for your event are endless.
-    room_image: /assets/images/Event Spaces The Grand Room.jpg
+    room_image: '/assets/images/Grand room event spaces grand room.jpg'
     whole_space_capacity_title: Whole space capacity
     whole_space_capacity_items: 
       - name: COCKTAIL
@@ -35,7 +41,7 @@ list_of_rooms:
 
 
       This space can be divided to allow for an open cocktail area or a private exclusive sit down meal.
-    room_image: "/assets/images/Event Spaces The Chapel Room.jpg"
+    room_image: "/assets/images/Grand room event spaces chapel room.jpg"
     whole_space_capacity_title: Whole space capacity
     whole_space_capacity_items: 
       - name: COCKTAIL
@@ -44,7 +50,7 @@ list_of_rooms:
         number: 25
       - name: RECTANGLE
         number: 40
-    divided_space_capacity_title: Divided space
+    divided_space_capacity_title: Divided space capacity
     divided_space_capacity_items:
       - name: COCKTAIL
         number: NA
@@ -58,7 +64,7 @@ list_of_rooms:
 
 
       With wrap around windows this space allows for view out onto Chapel Street and Toorak Road. The room is divided with the use of velvet curtains creating an intimate luxe feel to the space.
-    room_image: "/assets/images/Event Spaces The Toortak Room.jpg"
+    room_image: "/assets/images/Grand room event spaces toorak room.jpg"
     whole_space_capacity_title: Whole space capacity
     whole_space_capacity_items: 
       - name: COCKTAIL
@@ -68,8 +74,20 @@ list_of_rooms:
       - name: RECTANGLE
         number: 40
 
-button_text: enquire now
-button_link: '/contact/#contact-form-cta'
+activate_slider: true
+slider_images: 
+  - image: '/assets/images/Grand Room Event Spaces slider 1.jpg' 
+    alt_text: 'Slider image 1'
+  - image: '/assets/images/Grand Room Event Spaces slider 2.jpg' 
+    alt_text: 'Slider image 2'
+  - image: '/assets/images/Grand Room Event Spaces slider 3.jpg' 
+    alt_text: 'Slider image 3'
+  - image: '/assets/images/Grand Room Event Spaces Cover.jpg' 
+    alt_text: 'Slider image 4'
+  - image: '/assets/images/Bromley About image 2.jpg' 
+    alt_text: 'Slider image 5'
+  - image: '/assets/images/Bromley About image 1.jpg' 
+    alt_text: 'Slider image 6'
 ---
 
 

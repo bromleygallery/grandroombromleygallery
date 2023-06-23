@@ -1,28 +1,44 @@
 ---
 permalink: /bromley/about/
-layout: about-bromley
-_template: about-bromley
-current_page: about-bromley
+layout: about
+_template: about
+current_page: about
 main_space_group: Bromley Gallery & Event Center
 shadred_temlate: about
+header: bromley
 
 meta_description_title: About us
 meta_description: Our objective is to create a limitless atmosphere where guest feel free to connect with each other
 
 cover_image: "/assets/images/Bromley About cover.jpg"
-events_title:  LK Hospitality Events
-events_text:  >-
-  Our objective is to create a limitless atmosphere where guest feel free to connect with each other. A place where memories can be lived, history can be written and togetherness will be celebrated.
+page_title: BROMLEY GALLERY
 
 
-  A bold, dynamic and limitless venue that elaborates with a network of trendy, innovative and energetic Melbourne professionals.
+  & EVENTS SPACES
+first_section_image: '/assets/images/Bromley About image 1.jpg'
+first_section_title: BROMLEY GALLERY
+first_section_text: Our objective is to create a limitless atmosphere where guest feel free to connect with each other. A place where memories can be lived, history can be written and togetherness will be celebrated.
 
 
-  The ambition is to unfold a authentic voice in the event industry, exploring and surprising with its guests by using our knowledge, creativity, don’t hold-back attitude and our passion for quality food and high end service.
-artist:  David Bromley
-artist_text:  >-
-  Born in 1960 in Sheffield, England, David Bromley immigrated to Australia with his family in 1964 and emerged as a painter in the mid 1980s. Since then, he has become one of the most recognisable and innovative artists in Australia.
-artist_image: /assets/images/Artist.jpg
+  A bold, dynamic and limitless venue that elaborates with a network of trendy, innovative and energetic Melbourne professionals. The ambition is to unfold a authentic voice in the event industry, exploring and surprising with its guests by using our knowledge, creativity, don’t hold-back attitude and our passion for quality food and high end service.
+
+second_section_image: '/assets/images/Bromley About image 2.jpg'
+food_title:  The Food
+food_text:  >-
+  Our expert chefs have curated menus that are versatile and abundant with a focus on quality Victorian produce. We take pride in our commitment to using only the best the region has to offer, and we work directly with local farmers & growers to ensure we honour the seasonality of produce. Led by our Culinary Director, your event is in impeccably experienced and imaginative hands. Allow our creative team to realise your wildest imagination and compose menus to complement any event.
+person_proffesion: Culinary Director
+person_name: Stephen Nairn
+person_image: /img/stephen_nairn.png
+testimonial_text: >-
+  Hailing from Scotland, Stephen’s Nairn’s 20-year career in the Hospitality industrybegan at home, where he honed his skills in renowned European kitchens before receiving a scholarship to work at Eleven Madison Park in New York. Intrigued by Melbourne's dining scene, he made Australia his home, rising to Executive Chef at Vue de Monde and later serving as Head Chef at Estelle by Scott Pickett.
+  
+  
+  Nairn's desire for creative exploration led him to join LK Hospitality in 2018 to oversee a portfolio of restaurants including Omnia Bistro & Bar and Yūgen Dining (both awarded Two Chef Hats), as well as Yūgen Tea Bar, The Grand Room, and Bromley Gallery. Nairn was a finalist for The Age Good Food Guide's “Chef of The Year” in 2023. With a deep appreciation for seasonality and quality ingredients, his commitment to culinary excellence shines through in the delightful dishes he creates for his guests.
+food_image: /assets/images/230413 The Grand Room1584  Lo Res 1.jpg
+beverage_title: The Beverages
+beverage_text:  >-
+    Our menus are matched with an equally thoughtful collection of the finest wines, meticulously curated by our in-house sommeliers. From intimate gatherings to large-scale events, our beverage packages are designed to cater to your needs and exceed your guests expectations, providing an unforgettable experience.
+beverage_image: /assets/images/230413 The Grand Room2544 1.jpg
 ---
 
 

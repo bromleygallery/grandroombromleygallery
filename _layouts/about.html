@@ -1,0 +1,85 @@
+{% assign current_page = page.current_page %}
+
+{% include head.html %}
+
+{% if page.header == 'grand_room' %}
+  {% include header/grand-room-header.html %}
+{% else %}
+  {% include header/bromley-header.html %}
+{% endif %}
+
+
+<section id="about-cover" class="cover-image" style="background-image: url('{{page.cover_image}}');">
+  <div class="overlay"></div>
+  <div class="cover-text relative">
+    <h1>{{page.page_title | markdownify  }}</h1>
+  </div>
+</section>
+
+<main class="px-4 md:px-0">
+  <div class="flex flex-col-reverse md:flex-row items-center justify-between mb-20 md:mb-0">
+    <div class="w-full md:w-1/2 about-section-image reveal-left">
+      <img class="w-full" src="{{page.first_section_image}}" alt="{{ page.above_title_first_section }}">
+    </div>
+    <div class="w-full md:w-1/2 flex items-center justify-center mb-16 md:mb-0">
+      <div class="mt-12 md:mt-0 p-0 md:px-8 xl:px-12 2xl:px-24">
+        {% if page.above_title_first_section %}
+          <h4 class="above-title mb-8 md:mb-16 text-center reveal">{{ page.above_title_first_section }}</h4>
+        {% endif %}
+        <h2 class="first-section-title mb-10 reveal">{{ page.first_section_title }}</h2>
+        <div class="first-section-text mb-12 md:mb-16 reveal">{{ page.first_section_text | markdownify }}</div>
+        {% if page.first_section_link_url %}
+        <div class="text-center reveal">
+          <a href="{{page.first_section_link_url}}" class="first-section-link">
+            {{ page.first_section_link_text}}
+            <div class="underline-animation"></div>
+          </a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col-reverse md:flex-row-reverse items-center justify-between">
+    <div class="w-full md:w-1/2 about-section-image reveal-right">
+      <img class="w-full" src="{{page.second_section_image}}" alt="">
+    </div>
+    <div class="w-full md:w-1/2 flex items-center justify-center">
+      <div class="p-0 md:px-8 xl:px-12 2xl:px-20">
+        <h2 class="section-title reveal mb-4"> {{ page.food_title }} </h2>
+        <div class="section-text reveal mb-10 lg:mb-20 2xl:mb-40 mb-8">
+          {{ page.food_text | markdownify}}
+        </div>
+        
+        <h2 class="section-title md:text-right reveal mb-4"> {{ page.beverage_title }} </h2>
+        <div class="section-text md:text-right reveal"> {{ page.beverage_text | markdownify }} </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-container mx-auto my-24 md:my-40">
+    <div class="flex flex-col-reverse md:flex-row items-center justify-between">
+      <!-- text -->
+      <div class="text-box mt-12 md:mt-0">
+        <h2 class="hidden md:block section-title text-center reveal mb-10"> 
+          {{ page.person_proffesion }} 
+          <span style="font-family: var(--sohne);"> - </span> 
+          {{ page.person_name }} 
+        </h2>
+        <div class="text reveal"> {{ page.testimonial_text | markdownify }} </div>
+      </div>
+      <!-- image -->
+      <div class="image image-box reveal">
+        <img src="{{page.person_image}}" alt="{{page.person_name}}">
+      </div>
+      <!-- mobile title -->
+      <h2 class="block md:hidden section-title text-center reveal mb-10"> 
+        {{ page.person_proffesion }}
+        <span style="font-family: var(--sohne);"> - </span> 
+        {{ page.person_name }} 
+      </h2>
+    </div>
+  </div>
+</main>
+
+
+{% include footer.html %}

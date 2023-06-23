@@ -5,23 +5,22 @@
   --white: #FFFFFF;
   --black: #000000;
   --yellow: #FFB800;
+  --green: #90A583;
+  --pageBackground: #ece8e2;
+  --cardBackground: #E3DFD8;
   --avenir: '"Avenir", sans-serif';
   --sohne: '"Sohne-Leicht", sans-serif';
 }
 
 body {
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--pageBackground);
+  color: var(--black);
   margin: 0;
   list-style: none;
   opacity: 0;
   -webkit-animation: showBody 2s forwards;
   animation: showBody 2s forwards;
   scroll-behavior: smooth;
-}
-body.white {
-  background-color: var(--white);
-  color: var(--black);
 }
 html {
   overflow: scroll;
@@ -48,9 +47,7 @@ html {
   background-color: rgb(0, 0, 0, .75);
   transition: all .3s ease-in-out;
 }
-.custom-container {
-  max-width: 1200px;
-}
+
 .underline-animation {
   height: 1px;
   margin-top: -2px;
@@ -58,15 +55,8 @@ html {
 }
 
 a:hover .underline-animation {
-  background-color: #fff;
-  animation: loadUnderline ease-out forwards 0.5s;
-}
-body.white .underline-animation {
-  height: 2px;
-  margin-top: -1px;
-}
-body.white a:hover .underline-animation {
   background-color: var(--black);
+  animation: loadUnderline ease-out forwards 0.5s;
 }
 .section-title {
   font-family: Span Compressed;
@@ -78,21 +68,30 @@ body.white a:hover .underline-animation {
 .enquire-now {
   padding: 8px 40px;
   font-family: Span Compressed;
-  font-size: 32px;
+  font-size: 24px;
+  line-height: 30px;
   font-weight: 400;
   text-transform: capitalize;
-  background-color: var(--white);
+  background-color: rgba(233,233,233,1);
   color: var(--black);
   border-radius: 65px;
-  border: 2px solid var(--white);
+  border: 2px solid var(--black);
+  display: inline-block;
   transition: all .3s ease-in-out;
 }
 .enquire-now:hover {
-  background-color: var(--black);
+  /* background-color: var(--black);
   color: var(--white);
-  box-shadow: 2px 2px 50px white;
+  border: 2px solid var(--white); */
+
+  box-shadow: 0px 6px 0px black;
+  transform: translateY(-4px);
 }
 
+
+.custom-container {
+  width: 1200px;
+}
 
 .inbetween-line {
   width: 100%;
@@ -114,12 +113,14 @@ body.white .instagram-footer img{
   filter: brightness(0);
 }
 
+footer .inbetween-line {
+  background-color: var(--black);
+}
 
 /*   H E A D E R   */
 .header-logo {
   width: 60px;
 }
-
 #grand-room-header,
 #broomly-header {
   position: fixed;
@@ -128,7 +129,7 @@ body.white .instagram-footer img{
   right: 0;
   z-index: 100;
   padding: 32px 0;
-  transition: all .3s ease-in-out;
+  transition: all .3s ease-in;
 }
 
 #grand-room-header.scrolled,
@@ -185,6 +186,87 @@ body.white #broomly-header.scrolled {
   background-color: var(--yellow);
 }
 
+.site-header .enquire-now{
+  margin-left: auto;
+  margin-right: 80px;
+  font-size: 20px;
+  padding: 6px 28px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 40px;
+  transition: all .3s ease-in-out;
+}
+nav.open {
+  animation: loadNav .5s ease-out forwards;
+}
+
+.burger-line {
+  height: 4px;
+  border-radius: 10px;
+  background-color: var(--white);
+  width: 40px;
+  transition: all 0.5s ease-in-out;
+}
+
+.burger-line:nth-child(2) {
+  margin: 10px 0;
+}
+.close-nav {
+  top: 80px;
+  left: 80px;
+  cursor: pointer;
+}
+.close-nav .icon {
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+
+.close-nav .icon::before,
+.close-nav .icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 4px;
+  border-radius: 30px;
+  background-color: var(--white);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-nav .icon::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.navigation .menu-item a{
+  font-family: Span Compressed;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 16px 0;
+  padding: 12px 40px;
+  display: inline-block;
+  width: 100%;
+}
+.navigation .menu-item a > div {
+  display: inline-block;
+}
+
+.navigation li a:hover .underline-animation{
+  background-color: var(--white);
+}
 
 
 
@@ -216,6 +298,15 @@ body.white #broomly-header.scrolled {
   100% {
     opacity: 1;
   }
+}
+@keyframes loadNav {
+  0% { opacity: 0;  display: flex;}
+  100% { opacity: 1; display: flex;}
+}
+
+@-webkit-keyframes showBody {
+  0% { opacity: 0;  display: flex;}
+  100% { opacity: 1; display: flex;}
 }
 
 
@@ -292,23 +383,26 @@ body.white #broomly-header.scrolled {
 
 
 /*  A B O U T    P A G E  */
-#about-cover.cover-image {
+.cover-image {
   width: 100%;
   height: 100vh;
   overflow: hidden;
   background-size: cover;
   position: relative;
-  background-position: center bottom;
+  background-position: center;
+}
+#about .overlay {
+  background-color: rgba(0,0,0,0.3);
 }
 
-#about-grand-room .cover-text {
+.cover-text {
   position: absolute;
-  bottom: 48px;
+  bottom: 50%;
   left: 50%;
   width: 100%;
-  transform: translate(-50%);
+  transform: translate(-50%, 50%);
 }
-#about-grand-room .cover-text h1{
+.cover-text h1{
   font-family: 'Frunchy';
   font-style: normal;
   font-weight: 400;
@@ -316,16 +410,16 @@ body.white #broomly-header.scrolled {
   line-height: 80px;
   text-transform: uppercase;
   text-align: center;
-
+  color: var(--white);
 }
-#about-grand-room .cover-text h4 {
+ .cover-text h4 {
   font-family: 'Avenir';
   font-style: normal;
   font-size: 20px;
   line-height: 30px;
   text-align: center;
 }
-#about-grand-room .section-title {
+#about .section-title {
   color: var(--yellow);
 }
 .section-text,
@@ -336,10 +430,10 @@ body.white #broomly-header.scrolled {
   line-height: 28px;
   letter-spacing: 0em;
 }
-#about-grand-room .section-text p {
+#about .section-text p {
   margin-bottom: 1.5em;
 }
-#about-grand-room .section .section-image img{
+#about .section .section-image img{
   width: 100%;
 }
 .inner-about-section {
@@ -373,147 +467,295 @@ body.white #broomly-header.scrolled {
   position: sticky;
   top: 120px;
 }
-
-
-/*   E X P E R I E N C E S   */
-#experiences-grand-room,
-#experiences-bromley{
-  padding-top: 160px;
+.about-section-image {
+  max-height: 100vh;
+  overflow: hidden;
 }
-#experiences-grand-room .site-header,
-#experiences-bromley .site-header {
+
+.above-title {
+  font-size: 36px;
+  font-style: italic;
+  font-family: 'Span Compressed';
+  color: var(--green);
+}
+.first-section-title {
+  font-family: Frunchy;
+  font-size: 110px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.first-section-text p{
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-top: 1.5em;
+}
+.first-section-link {
+  font-family: Satoshi;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  display: inline-block;
+}
+.first-section-link .underline-animation {
+  width: 100%;
   background-color: var(--black);
 }
-#experiences-grand-room h1,
-#experiences-bromley h1 {
+
+#about .section-title {
   font-family: Span Compressed;
-  font-size: 64px;
-  font-weight: 100;
-  line-height: 72px;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0em;
+  color: var(--green);
+}
+#about .text-box {
+  max-width: calc(100% - 340px);
+}
+#about .text-box .text p {
+  margin-bottom: 1.5em;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
   text-align: center;
-  letter-spacing: -4px;
+
 }
-#experiences-grand-room h1 {
-  color: var(--yellow);
+#about .image-box {
+  width: 320px;
+  border-radius: 28px;
+  overflow: hidden;
 }
-#experiences-grand-room .experience-box,
-#experiences-bromley .experience-box {
-  aspect-ratio: 3 / 5;
+#about .section-title {
+  font-family: Span Compressed;
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 58px;
+  letter-spacing: 0em;
 }
-#experiences-grand-room .experience-box img,
-#experiences-bromley .experience-box img {
+
+/*   E X P E R I E N C E S   */
+.experiences .cover-text {
+  transform: translate(-50%, -100%);
+}
+.experiences .cover-image .overlay {
+  background-color: rgba(0,0,0,0.05);
+}
+.experiences .experience-title {
+  font-family: Span Compressed;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--green);
+  text-transform: uppercase;
+}
+.experiences .experience-text {
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.experiences .enquire-now:hover {
+  border-color: var(--black);
+}
+
+#experiences-bromley.experiences .cover-text {
+  transform: translate(-50%, 50%);
+}
+#experiences-bromley.experiences .cover-image .overlay {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.experience-section-image {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+/* GALLERY */
+
+.gallery .cover-image .overlay {
+  background-color: rgba(0,0,0,0.05);
+}
+#gallery-bromley.gallery .cover-image .overlay {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.images_group {
+  max-height: 1100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 27px;
+  grid-row-gap: 27px;
+  margin-top: 27px;
+}
+.images_group > div {
+  overflow: hidden;
+}
+.images_group > div img {
   width: 100%;
   height: 100%;
 }
-#experiences-grand-room .experience-box h2,
-#experiences-bromley .experience-box h2 {
-  font-family: 'Span Compressed';
-  font-style: normal;
-  font-weight: 100;
-  font-size: 40px;
-  line-height: 48px;
-  text-align: center;
-  margin-top: 12px;
-  text-transform: uppercase;
-  letter-spacing: -2px;
-  display: inline-block;
-}
-#experiences-grand-room .experience-box img,
-#experiences-bromley .experience-box img {
-  transition: all .3s ease-in-out;
-}
-#experiences-grand-room .experience-box:hover img,
-#experiences-bromley .experience-box:hover img{
-  transform: translateY(-8px);
-}
 
+.images_group.big-image-left > div:nth-child(1) { grid-area: 1 / 1 / 3 / 3; }
+.images_group.big-image-left > div:nth-child(2) { grid-area: 1 / 3 / 2 / 4; }
+.images_group.big-image-left > div:nth-child(3) { grid-area: 1 / 4 / 2 / 5; }
+.images_group.big-image-left > div:nth-child(4) { grid-area: 2 / 3 / 3 / 5; }
+
+.images_group.big-image-right > div:nth-child(1) { grid-area: 1 / 1 / 2 / 2; }
+.images_group.big-image-right > div:nth-child(2) { grid-area: 1 / 2 / 2 / 3; }
+.images_group.big-image-right > div:nth-child(3) { grid-area: 2 / 1 / 3 / 3; }
+.images_group.big-image-right > div:nth-child(4) { grid-area: 1 / 3 / 3 / 5; }
+
+  
 
 
 /*   E V E N T   S P A C E S   */
-#event-spaces-grand-room {
-  padding-top: 200px;
+/* #event-spaces.grand-room */
+#event-spaces .overlay {
+  background-color: rgba(0,0,0,0.6);
 }
-#event-spaces-grand-room .section h1 {
+#event-spaces .cover-image {
+  background-position: bottom;
+}
+.text-below-cover p{
+  font-family: Satoshi;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
   text-align: center;
+  margin-top: 1.5em;
 }
-.section-text-info h4{
+.room-card {
+  background-color: var(--cardBackground);
+  border-radius: 30px;
+  padding: 40px 0;
+}
+.room-title {
+  font-family: Span Compressed;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: var(--green);
+}
+.room-text {
+  font-family: Satoshi;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: center;
+  min-height: 220px;
+}
+.room-image {
+  overflow: hidden;
+}
+.room-image img {
+  border-radius: 30px;
+  width: 100%;
+}
+.room-card .section-text-info h4 {
   font-family: Satoshi;
   font-size: 24px;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 28px;
   letter-spacing: 0em;
   text-align: center;
 }
-.section-text-info .capacity-name {
+.room-card .capacity-box .capacity-name {
   font-family: Satoshi;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 27px;
   letter-spacing: 0em;
   text-align: center;
 }
-.section-text-info .capacity-number {
-  font-family: var(--sohne);
-  font-size: 48px;
+.room-card .capacity-box .capacity-number {
+  background-color: var(--pageBackground); 
+  font-family: 'Fruncky';
+  font-size: 36px;
   font-weight: 400;
-  line-height: 58px;
+  line-height: 48px;
   letter-spacing: 0em;
   text-align: center;
-  color: var(--black);
-  background-color: #D9D9D9;
-  width: 160px;
-  height: 70px;
-}
-#event-spaces-grand-room .enquire-now {
-  line-height: 58px;
+  width: 84px;
+  height: 64px;
 }
 
+.event-space-swiper .swiper-slide .image-box{
+  position: relative;
+  width: 100%;
+  padding-top: 118%;
+  /* or padding-bottom: 85%; if you want a vertical aspect ratio */
+  overflow: hidden;
+}
+.event-space-swiper .swiper-slide .image-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  border-radius: 30px;
+  overflow: hidden;
+}
 
-
+.swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal {
+  bottom: 0px !important;
+  top: unset !important;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: var(--green);
+}
+.swiper-pagination-progressbar {
+  background: rgb(0, 0, 0, 0.1);
+}
 
 
 /*   C O N T A C T   */
-body.contact {
-  padding-top: 140px;
-}
-body.contact .cover-image {
-  width: 100%;
-  height: 80vh;
-  overflow: hidden;
-  background-size: cover;
-  position: relative;
-  background-position: center bottom;
-}
 
-body.contact h1 {
-  font-family: Span Compressed;
-  font-size: 64px;
-  font-weight: 100;
-  line-height: 72px;
-  letter-spacing: 0em;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: -4px;
+.contact .overlay {
+  background-color: rgba(0,0,0,0.05);
 }
 body.contact .section-text,
 body.contact .section-text p {
-  font-family: Satoshi;
-  font-size: 28px;
+  font-family: Span Compressed;
+  font-size: 48px;
   font-weight: 400;
-  line-height: 36px;
+  line-height: 80px;
   letter-spacing: 0em;
   text-align: center;
+  color: var(--green);
 }
 
 .grand-room-form-container {
   transition: all .3s ease-in-out;
-  max-width: 800px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 160px;
 }
 .grand-room-form-container .custom-bckg {
-  background-color: rgba(233,233,233,1);
+  background-color: var(--cardBackground);
+  border-radius: 27px;
   transition: all .3s ease-in-out;
 }
 .grand-room-form-container input,
@@ -522,8 +764,12 @@ body.contact .section-text p {
   padding: 6px 20px;
   resize: none;
   outline: none;
-  background-color: #C7C4C4;
+  background-color: #ECE8E2;
   color: #000;
+  border-radius: 27px;
+  font-family: Satoshi;
+  font-size: 22px;
+  line-height: 28px;
 }
  .grand-room-form-container input::placeholder {
   color: rgba(0,0,0,0.5);
@@ -532,7 +778,13 @@ body.contact .section-text p {
   width: auto;
 }
 .grand-room-form-container .custom-label {
-  font-family: "Sohne-Leicht", sans-serif;
+  font-family: Satoshi;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
+
 }
 
 .grand-room-form-container input[type='checkbox']{
@@ -540,150 +792,23 @@ body.contact .section-text p {
   accent-color: #FFB800
 
 }
-.grand-room-form-container .btn {
-  padding: 12px 30px;
-  border-radius: 40px;
-  border: 1px solid black;
-  background-color: rgba(233,233,233,1);
-  font-family: Span Compressed;
+.grand-room-form-container .enquire-now {
   font-size: 24px;
-  color: black;
-  transition: all .3s ease-in-out;
+  line-height: 29px;
+  padding: 8px 24px;
+  background-color: var(--pageBackground);
 }
-.grand-room-form-container .btn:hover {
-  box-shadow: 0px 6px 0px black;
-  transform: translateY(-4px);
-}
-
-
-
-
-/*   S I N G L E   E X P E R I E N C E   */
-body.experience {
-  padding-top: 186px;
-}
-body.experience #grand-room-header,
-body.experience #broomly-header {
-  background-color: var(--white);
-  padding: 32px 0 0px;
-}
-body.experience #grand-room-header nav,
-body.experience #broomly-header nav {
-  padding-bottom: 28px;
-  transition: all .3s ease-in-out;
-}
-body.experience #grand-room-header.scrolled,
-body.experience #broomly-header.scrolled {
-  background-color: var(--white);
-  padding: 16px 0 0px;
-}
-body.experience #grand-room-header.scrolled nav,
-body.experience #broomly-header.scrolled nav {
-  padding-bottom: 12px;
-}
-body.experience .experiences-nav {
-  display: block;
-}
-body.experience .site-header .inbetween-line {
-  display: block;
-}
-
-body.experience .cover-image {
-  width: 100%;
-  height: 85vh;
-  overflow: hidden;
-  background-size: cover;
-  position: relative;
-  background-position: center;
-}
-body.experience h1 {
-  font-size: 64px;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-}
-body.experience .section-text p {
-  margin-bottom: 1.5em;
-}
-body.experience .enquire-now {
-  padding: 8px 40px;
-  border-radius: 65px;
-  border: 1px solid black;
-  background-color: rgba(233,233,233,1);
-  font-family: Span Compressed;
-  font-size: 32px;
-  color: black;
-  transition: all .3s ease-in-out;
-  background: white;
-}
-body.experience .enquire-now:hover {
-  box-shadow: 0px 6px 0px black;
-  transform: translateY(-4px);
-}
-body.experience .experience-gallery .experience-gallery-image-box:nth-child(3n+1){
-  width: 25%;
-}
-body.experience .experience-gallery .experience-gallery-image-box:nth-child(3n+2){
-  width: calc(50% - 2em);
-}
-body.experience .experience-gallery .experience-gallery-image-box:nth-child(3n+3){
-  width: 25%;
-}
-body.experience .experience-gallery .experience-gallery-image-box img{
-  transition: all .3s ease-in-out;
-}
-body.experience .experience-gallery .experience-gallery-image-box img:hover {
-  transform: scale(1.04);
-}
-body.experience .experience-gallery .experience-gallery-image-box img{
-  width: 100%;
-  height: 100%;
-}
-
-/* Bromley Experience */
-body.custom-white {
-  background-color: #F5F5F5;
-}
-body.custom-white #grand-room-header.scrolled, 
-body.custom-white #broomly-header.scrolled {
-  background-color: #F5F5F5;
-}
-body.custom-white #grand-room-header, 
-body.experience.custom-white #broomly-header {
-  background-color: #F5F5F5;
-}
-body.custom-white #grand-room-header .experiences-nav, 
-body.custom-white #broomly-header .experiences-nav {
-  background-color: #F5F5F5;
-}
-body.custom-white #grand-room-header .experiences-nav a, 
-body.custom-white #broomly-header .experiences-nav a {
-  color: var(--black);
-}
-body.custom-white #grand-room-header .experiences-nav a:hover .underline-animation, 
-body.custom-white #broomly-header .experiences-nav a:hover .underline-animation {
-  background-color: var(--black);
-}
-body.experience.custom-white h1 {
-  color: var(--black);
+.grand-room-form-container .enquire-now:hover {
+  box-shadow: 0px 3px 0px black;
+  transform: translateY(-2px);
 }
 
 
 
 /*  B R O M L E Y   E V E N T  S P A C E S   */
-#event-spaces-bromley {
-  padding-top: 130px;
-}
-#event-spaces-bromley h1 {
-  font-family: Span Compressed;
-  font-size: 64px;
-  font-weight: 100;
-  line-height: 72px;
-  text-align: center;
-  letter-spacing: -4px;
-}
+
 #event-spaces-bromley .section-text-info .capacity-number {
-  background-color: var(--white);
-  border: 1px solid var(--black);
+  width: 140px;
 }
 #event-spaces-bromley .enquire-now {
   border: 1px solid var(--black);
@@ -707,7 +832,12 @@ body.experience.custom-white h1 {
 .event-spaces-gallery .event-spaces-gallery-bottom img {
   height: 100%;
 }
-
+#event-spaces-bromley .room-text {
+  min-height: auto;
+}
+#event-spaces-bromley .room-card .capacity-box .capacity-name {
+  width: 8rem;
+}
 
 /*  B R O M L E Y   C O N T A C T  */
 #contact-bromley h1 {
@@ -717,7 +847,7 @@ body.experience.custom-white h1 {
 
 /*  B R O M L E Y    A B O U T  */
 #about-bromley .overlay {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.4);
 }
 #about-bromley .cover-text {
   position: absolute;
@@ -756,6 +886,9 @@ body.experience.custom-white h1 {
   .container, 
   .custom-container {
     padding: 0 16px;
+  }
+  .custom-container {
+    width: 100%;
   }
   .header-logo {
     width: 50px;
@@ -799,36 +932,6 @@ body.experience.custom-white h1 {
     width: 32px;
     height: 25px;
   }
-  .burger-line {
-    height: 4px;
-    border-radius: 10px;
-    background-color: var(--white);
-    width: 32px;
-    transition: all 0.5s ease-in-out;
-  }
-  body.white .burger-line{
-    background-color: var(--black);
-  }
-
-  .burger-line:nth-child(2) {
-    margin: 6px 0;
-  }
-
-  .close-nav .burger-line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .close-nav .burger-line:nth-child(1) {
-    -webkit-transform: translateY(10px) rotate(45deg);
-    -ms-transform: translateY(10px) rotate(45deg);
-    transform: translateY(10px) rotate(45deg);
-  }
-
-  .close-nav .burger-line:nth-child(3) {
-    -webkit-transform: translateY(-10px) rotate(-45deg);
-    -ms-transform: translateY(-10px) rotate(-45deg);
-    transform: translateY(-10px) rotate(-45deg);
-  }
 
   #mobileMenu .mobile-menu-item {
     font-size: 24px;
@@ -839,7 +942,37 @@ body.experience.custom-white h1 {
   #mobileMenu .mobile-menu-item.submenu {
     padding-left: 32px;
   }
+
+  #mobileMenu .mobile-menu-item.submenu .mobile-menu-item {
+    font-size: 18px;
+    padding: 6px 0;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  header.site-header .enquire-now {
+    display: none;
+  }
   
+  .close-nav {
+    top: 20px;
+    left: 20px;
+  }
+  .close-nav .icon {
+    width: 36px;
+  }
+  .navigation .menu-item a {
+    font-size: 28px;
+    line-height: 28px;
+    margin: 8px 0;
+  }
+
+  .burger-line {
+    height: 3px;
+    width: 36px;
+  }
+  .burger-line:nth-child(2){
+    margin: 8px 0;
+  }
 
 
   /*   L A N D I N G   */
@@ -885,10 +1018,10 @@ body.experience.custom-white h1 {
 
   /*   A B O U T   */
 
-  #about-grand-room .cover-text {
+  #about .cover-text {
     width: 100%;
   }
-  #about-grand-room .cover-text h1 {
+  #about .cover-text h1 {
     font-size: 60px;
     line-height: 60px;
   }
@@ -902,34 +1035,35 @@ body.experience.custom-white h1 {
     font-size: 18px;
     line-height: 24px;
   }
-  .inner-about-section .image {
-    position: static;
+  #about .text-box {
+    width: 100%;
+    max-width: 100%;
+  }
+  .above-title {
+    font-size: 28px;
+  }
+  .first-section-title {
+    font-size: 56px;
+    line-height: 60px;
+  }
+  #about .section-title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  #about .custom-container {
+    padding: 0;
+  }
+  #about .image-box {
     width: 100%;
   }
-  .inner-about-section .text-box {
-    width: 100%;
-  }
-  .inner-about-section .text-box h3 {
-    font-size: 24px;
-    line-height: 24px;
-  }
-  .inner-about-section .text-box .text {
+  #about .text-box .text p {
     text-align: left;
   }
 
   /*   E X P E R I E N C E S   */
-  #experiences-grand-room, #experiences-bromley {
-    padding-top: 140px;
-  }
-  #experiences-grand-room h1, 
-  #experiences-bromley h1 {
-    font-size: 36px;
-    line-height: 48px;
-    letter-spacing: -2px;
-  }
-  #experiences-grand-room .experience-box, 
-  #experiences-bromley .experience-box {
-    aspect-ratio: auto;
+   .cover-text h1 {
+    font-size: 60px;
+    line-height: 60px;
   }
 
 
@@ -1003,18 +1137,33 @@ body.experience.custom-white h1 {
     line-height: 40px;
   }
 
+  .text-below-cover p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .room-title {
+    line-height: 48px;
+  }
+  .room-text {
+    font-size: 18px;
+  }
+  .room-card .capacity-box .capacity-number {
+    border: 1px solid var(--black);
+    height: 52px;
+  }
+  .room-card {
+    padding: 40px 0 20px;
+  }
+  .room-card .section-text-info h4 {
+    font-size: 22px
+  }
+
 
 
   /*  C O N T A C T  */
-  body.contact {
-    padding-top: 120px;
-  }
-  body.contact h1 {
-    font-size: 60px;
-    letter-spacing: -2px;
-  }
+  
   body.contact .section-text, body.contact .section-text p {
-    font-size: 20px;
+    font-size: 28px;
     line-height: 30px;
   }
   .grand-room-form-container {
@@ -1027,6 +1176,18 @@ body.experience.custom-white h1 {
 
   .animated-line {
     animation: loadLine 1.3s ease-out forwards;
+  }
+  .grand-room-form-container .custom-label {
+    margin-bottom: 8px
+  }
+  .grand-room-form-container textarea {
+   height: 10em;
+  }
+  .grand-room-form-container input, 
+  .grand-room-form-container textarea {
+    font-size: 18px;
+    padding: 8px 20px;
+    border: 1px solid var(--black);
   }
 
 
@@ -1052,33 +1213,6 @@ body.experience.custom-white h1 {
   }
 
 
-  #event-spaces-bromley {
-    padding-top: 160px;
-  }
-  #event-spaces-bromley .enquire-now {
-    padding: 8px 32px;
-    font-size: 24px;
-    line-height: 30px;
-  }
-  #event-spaces-bromley h1 {
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: 0px;
-  }
-  .section-text-info .capacity-name {
-    font-size: 18px;
-    line-height: 26px;
-  }
-  .section-text-info .capacity-number {
-    width: 100px;
-    height: 50px;
-    font-size: 36px;
-    line-height: 40px;
-  }
-
-  #event-spaces-bromley {
-    padding-top: 130px;
-  }
 
   .event-spaces-gallery .event-spaces-gallery-left{
     width: 100%
@@ -1092,6 +1226,21 @@ body.experience.custom-white h1 {
   .event-spaces-gallery .event-spaces-gallery-bottom img {
     height: 100%;
   }
+
+
+
+  /* GALERY */
+  .gallery .images_group {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: unset;
+    max-height: none;
+  }
+
+  .images_group > div {
+    /* overflow: visible; */
+  }
+
 }
 
 @media (min-width: 450px) and (max-width: 1240px) {
@@ -1110,9 +1259,6 @@ body.experience.custom-white h1 {
   #experiences-grand-room h1, #experiences-bromley h1 {
     font-size: 56px;
     line-height: 64px;
-  }
-  #experiences-grand-room, #experiences-bromley {
-    padding-top: 190px;
   }
   body.experience .enquire-now {
     padding: 8px 32px;
@@ -1139,5 +1285,5 @@ body.experience.custom-white h1 {
     padding: 8px 32px;
     font-size: 24px;
     line-height: 30px;
-}
+  }
 }

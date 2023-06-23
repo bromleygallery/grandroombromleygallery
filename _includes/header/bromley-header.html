@@ -1,154 +1,74 @@
-<header id="grand-room-header" class="site-header">
-  <nav class="hidden md:block container mx-auto">
-    <ul class="flex flex-col md:flex-row items-center justify-between">
-      <li class="menu-item">
-        <a href="/bromley/about">
-          About us
-          <div class="underline-animation"></div>
-        </a>
-      </li>
-      <li class="menu-item">
-        <a href="/bromley/experiences">
-          experiences
-          <div class="underline-animation"></div>
-        </a>
-      </li>
-      <li class="menu-item-logo">
-        <a href="/">
-          {% if page.shadred_temlate contains "white" %}
-            <img src="/assets/images/LK-Hospitality-Logo-black.png" alt="LK Hospitality Logo" class="header-logo">
-          {% else %}
-            <img src="/assets/images/LK-Hospitality-Logo-white.png" alt="LK Hospitality Logo" class="header-logo">
-          {% endif %}
-        </a>
-      </li>
-      <li class="menu-item">
-        <a href="/bromley/event-spaces">
-          Event spaces
-          <div class="underline-animation"></div>
-        </a>
-      </li>
-      <li class="menu-item">
-        <a href="/bromley/contact">
-          Contact
-          <div class="underline-animation"></div>
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Mobile -->
-  <div class="container mx-auto">
-    <div class="flex items-center justify-between md:hidden">
-      <div class="mobile-logo">
-        <a href="/">
-          {% if page.shadred_temlate contains "white" %}
-            <img src="/assets/images/LK-Hospitality-Logo-black.png" alt="LK Hospitality Logo" class="header-logo">
-          {% else %}
-            <img src="/assets/images/LK-Hospitality-Logo-white.png" alt="LK Hospitality Logo" class="header-logo">
-          {% endif %}
-        </a>
-      </div>
-      <div class="nav-toggle" aria-label="Open menu" type="button">
-        <div class="burger-line"> </div>
-        <div class="burger-line"> </div>
-        <div class="burger-line"> </div>
-      </div>
+<header id="broomly-header" class="site-header">
+  <div class="px-4 lg:px-40 mx-auto flex items-start md:items-center justify-between">
+    <div class="header-logo">
+      <a href="/">
+        <img src="/assets/images/LK-Hospitality-Logo-white.png" alt="Logo">
+      </a>
     </div>
-  </div>
-  <!-- end mobile -->
-  <div class="inbetween-line animated-line hidden"></div>
-  <div class="experiences-nav hidden">
-    <div class="overflow-x-scroll md:overflow-x-hidden md:container mx-auto flex items-center justify-between">
-      <a href="/bromley/experiences/weddings/">
-        Weddings
-        <div class="underline-animation"></div>
+    <div class="flex items-center justify-between mt-2 mr-3 md:mt-0 md:mr-0">
+      <a href="#" class="enquire-now">
+        Enquire now
       </a>
-      <a href="/bromley/experiences/corporate/">
-        Corporate
-        <div class="underline-animation"></div>
-      </a>
-      <div class="select-none">&nbsp;</div>
-      <a href="/bromley/experiences/social/">
-        Social
-        <div class="underline-animation"></div>
-      </a>
-      <a href="/bromley/experiences/bespoke/">
-        Bespoke
-        <div class="underline-animation"></div>
-      </a>
+      <div class="nav-toggle cursor-pointer p-2">
+        <div class="burger-line"> </div>
+        <div class="burger-line"> </div>
+        <div class="burger-line"> </div>
     </div>
   </div>
 </header>
 
-<!-- Mobile menu -->
-<nav id="mobileMenu" class="block md:hidden">
-  <div class="container mx-auto my-4">
-    <div class="flex items-center justify-between md:hidden">
-      <div class="mobile-logo">
-        <a href="/">
-          {% if page.shadred_temlate contains "white" %}
-            <img src="/assets/images/LK-Hospitality-Logo-black.png" alt="LK Hospitality Logo" class="header-logo">
-          {% else %}
-            <img src="/assets/images/LK-Hospitality-Logo-white.png" alt="LK Hospitality Logo" class="header-logo">
-          {% endif %}
-        </a>
-      </div>
-      <div class="close-nav mr-1">
-        <div class="burger-line"> </div>
-        <div class="burger-line"> </div>
-        <div class="burger-line"> </div>
-      </div>
-    </div>
-    <ul class="mt-8">
-      <div class="mobile-menu-item">
-        <a href="/bromley/about">
-          About us
+<nav class="navigation flex items-center justify-center hidden">
+  <div class="close-nav absolute">
+    <div class="icon"></div>
+  </div>
+  <ul>
+    <li class="menu-item">
+      <a href="/bromley/about">
+        <div>
+          About
           <div class="underline-animation"></div>
-        </a>
-      </div>
-      <div class="mobile-menu-item">
-        <a href="/bromley/experiences">
-          experiences
+        </div>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="/bromley/event-spaces">
+        <div>
+          Our Spaces
           <div class="underline-animation"></div>
-        </a>
-      </div>
-      <div class="mobile-menu-item submenu">
-        <a href="/bromley/experiences/weddings/">
-          Weddings
+        </div>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="/bromley/experiences">
+        <div>
+          Experiences
           <div class="underline-animation"></div>
-        </a>
-      </div>
-      <div class="mobile-menu-item submenu">
-        <a href="/bromley/experiences/corporate/">
-          Corporate
+        </div>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="/bromley/gallery">
+        <div>
+          Gallery
           <div class="underline-animation"></div>
-        </a>
-      </div>
-      <div class="mobile-menu-item submenu">
-        <a href="/bromley/experiences/social/">
-          Social
-          <div class="underline-animation"></div>
-        </a>
-      </div>
-      <div class="mobile-menu-item submenu">
-        <a href="/bromley/experiences/bespoke/">
-          Bespoke
-          <div class="underline-animation"></div>
-        </a>
-      </div>
-      <div class="mobile-menu-item">
-        <a href="/bromley/event-spaces">
-          Event spaces
-          <div class="underline-animation"></div>
-        </a>
-      </div>
-      <div class="mobile-menu-item">
-        <a href="/bromley/contact">
+        </div>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="/bromley/contact">
+        <div>
           Contact
           <div class="underline-animation"></div>
-        </a>
-      </div>
-    </ul>
-  </div>
+        </div>
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="/about">
+        <div>
+          The Grand Room
+          <div class="underline-animation"></div>
+        </div>
+      </a>
+    </li>
+  </ul>
 </nav>

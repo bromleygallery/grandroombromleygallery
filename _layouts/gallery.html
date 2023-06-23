@@ -1,0 +1,45 @@
+{% assign current_page = page.current_page %}
+
+{% include head.html %}
+
+{% if page.header == 'grand_room' %}
+  {% include header/grand-room-header.html %}
+{% else %}
+  {% include header/bromley-header.html %}
+{% endif %}
+
+
+<section id="experience-cover" class="cover-image" style="background-image: url('{{page.cover_image}}');">
+  <div class="overlay"></div>
+  <div class="cover-text relative">
+    <h1>{{page.page_title | markdownify  }}</h1>
+  </div>
+</section>
+
+<main class="my-20">
+  <div class="container mx-auto">
+    {% for images_group in page.images_group %}
+    {% assign index = forloop.index0 | modulo: 2 %}
+  
+      {% if index == 0 %}
+      <div class="images_group big-image-left "> 
+      {% else %}
+      <div class="images_group big-image-right "> 
+      {% endif %}
+        
+      {% for image in images_group.images %}
+        <div class="image-box reveal"> 
+          <img src="{{ image.path }}" alt="{{ image.alt }}">
+        </div>
+      {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</main>
+
+
+
+
+
+
+{% include footer.html %}

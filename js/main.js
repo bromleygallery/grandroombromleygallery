@@ -15,19 +15,36 @@ import SmoothScroll from './smoothScroll.js'
     })
   }
 
-  const navigation = document.querySelector('#mobileMenu')
   const burger = document.querySelector('.nav-toggle')
-  const closeBurger = document.querySelector('.close-nav')
-  if (burger && closeBurger) {
+  const closeNav = document.querySelector('.close-nav')
+  const navigation = document.querySelector('.navigation')
+  if (burger && closeNav) {
     burger.addEventListener('click', () => {
-      navigation.classList.add('menu--opened')
-      burger.classList.add('nav-toggle--closed')     
-    });
-    closeBurger.addEventListener('click', () => {
-      navigation.classList.remove('menu--opened')
-      burger.classList.remove('nav-toggle--closed')     
+      navigation.classList.add('open')
+      navigation.classList.toggle('hidden')
+    })
+    closeNav.addEventListener('click', () => {
+      navigation.classList.remove('open')
+      navigation.classList.toggle('hidden')
+    })
+  }
+
+  if(document.querySelector('.event-space-swiper')) {
+     new Swiper(".event-space-swiper", {
+      slidesPerView: screen.width < 1028 ? '1.15' : '3.4',
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
     });
   }
+
 
 
   // add animations to lines
@@ -63,21 +80,11 @@ import SmoothScroll from './smoothScroll.js'
     let screenHeight = window.innerHeight
     const header = document.querySelector('.site-header')
 
-    if(this.document.body.classList.contains('about') ) {
-      if (scroll > (screenHeight - 80)) {
-        header.classList.add('scrolled')
-      }
-      else {
-        header.classList.remove('scrolled')
-      }
+    if (scroll > (screenHeight - 110)) {
+      header.classList.add('scrolled')
     }
     else {
-      if (scroll > 20) {
-        header.classList.add('scrolled')
-      }
-      else {
-        header.classList.remove('scrolled')
-      }
+      header.classList.remove('scrolled')
     }
   })
   

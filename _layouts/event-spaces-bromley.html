@@ -4,56 +4,76 @@
 {% include header/bromley-header.html %}
 
 
-<main class="mb-16">
-  <div class="section mb-20 md:mt-24">
-    <div class="container mx-auto">
-      <h1 class="section-title text-center reveal mb-12 md:mb-16"> {{ page.page_title }} </h1>
-      <div class="section-text text-center my-4 reveal">
-        {{ page.text_below_page_title | markdownify}}
-      </div>
+<section class="cover-image" style="background-image: url('{{page.cover_image}}');">
+  <div class="overlay"></div>
+  <div class="cover-text relative">
+    <h1>{{page.page_title | markdownify }}</h1>
+  </div>
+</section>
+
+<main class="px-4 md:px-0 my-20">
+  <div class="container mx-auto">
+    <div class="text-below-cover">
+      {% if page.text_below_cover_image %}
+      {{ page.text_below_cover_image | markdownify }}
+      {% endif %}
     </div>
   </div>
-  <div class="section-text-info w-full md:w-1/2 mx-auto">
-    {% if page.whole_space_capacity_title %}
-      <h4 class="text-center mt-6 reveal">{{page.whole_space_capacity_title}}</h4>
-      <div class="flex items-center justify-center reveal md:mt-6">
-        {% for item in page.whole_space_capacity_items %}
-          <div class="capacity-box m-4">
-            <div class="capacity-name mb-4">{{ item.name }}</div>
-            <div class="capacity-number flex items-center justify-center">{{ item.number }}</div>
-          </div>
+
+  <div class="room-card w-full md:w-3/5 mx-auto my-20 section mb-8 reveal">
+    <h2 class="room-title mb-8 reveal"> {{ page.room_name }} </h2>
+    <div class="room-text mb-6 px-4 md:px-10 reveal"> {{ page.room_text | markdownify }} </div>
+
+    <div class="room-image px-4 md:px-10 mt-6 md:mt-8 mb-16 md:mb-16 w-full">
+      <img src="{{ page.room_image }}" alt="Event Spaces {{ room.room_name }}" class="reveal">
+    </div>
+
+    {% if room.whole_space_capacity_title %}
+    <div class="w-full md:w-1/2">
+      <h4 class="text-center mb-6 reveal">{{room.whole_space_capacity_title}}</h4>
+      <div class="reveal">
+        {% for item in room.whole_space_capacity_items %}
+        <div class="capacity-box flex items-center justify-center mb-6 gap-x-8 reveal">
+          <div class="capacity-name">{{ item.name }}</div>
+          <div class="capacity-number flex items-center justify-center">{{ item.number }}</div>
+        </div>
         {% endfor %}
       </div>
+    </div>
     {% endif %}
-  </div>
 
-
-  <div class="bottom-cta mt-16 md:mt-32 mb-20 md:mb-32 reveal">
-    <div class="flex items-center justify-center">
-      <a href="{{page.button_link}}" class="enquire-now"> {{ page.button_text }} </a>
+    <div class="section-text-info w-full md:w-1/2 mx-auto">
+      {% if page.whole_space_capacity_title %}
+      <h4 class="text-center mb-6 reveal">{{page.whole_space_capacity_title}}</h4>
+      <div class="reveal md:mt-6">
+        {% for item in page.whole_space_capacity_items %}
+        <div class="capacity-box flex items-center justify-center mb-6 gap-x-8 reveal">
+          <div class="capacity-name md:mb-4">{{ item.name }}</div>
+          <div class="capacity-number flex items-center justify-center">{{ item.number }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
   </div>
 
-  <div class="event-spaces-gallery container mx-auto ">
-    <div class="event-spaces-gallery-container flex gap-4 flex-wrap ">
-      <div class="event-spaces-gallery-left w-full md:w-3/5 flex flex-col gap-4">
-        <img src="{{ page.first_image }}" alt="Bromley Event Spaces Gallery {{ page.first_image }}">
-        <img src="{{ page.third_image }}" alt="Bromley Event Spaces Gallery {{ page.third_image }}">
+
+  {% if page.activate_slider %}
+  <div class="event-space-swiper-container px-4 mb-10">
+    <div class="swiper event-space-swiper">
+      <div class="swiper-wrapper mb-2">
+        {% for image in page.slider_images %}
+        <div class="swiper-slide">
+          <div class="image-box">
+            <img src="{{ image.image }}" alt="{{ image.alt_text }}">
+          </div>
+        </div>
+        {% endfor %}
       </div>
-      <div class="event-spaces-gallery-right w-full md:w-2/5 flex flex-col gap-4">
-        <img src="{{ page.second_image }}" alt="Bromley Event Spaces Gallery {{ page.second_image }}">
-        <img src="{{ page.fourth_image }}" alt="Bromley Event Spaces Gallery {{ page.fourth_image }}">
-      </div>
-    </div>
-    <div class="event-spaces-gallery-bottom flex flex-col md:flex-row gap-4 mt-4">
-      <div class="first">
-        <img src="{{ page.fifth_image }}" alt="Bromley Event Spaces Gallery {{ page.fifth_image }}">
-      </div>
-      <div class="second">
-        <img src="{{ page.sixth_image }}" alt="Bromley Event Spaces Gallery {{ page.sixth_image }}">
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
+  {% endif %}
 </main>
 
 
