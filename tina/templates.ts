@@ -213,13 +213,13 @@ export function ourSpacesFields() {
         {
           type: "string",
           name: "divided_space_capacity_title",
-          label: "Capacity Title",
+          label: "Divided capacity Title",
           description: "If you don't want options below, leave this blank.",
         },
         {
           type: "object",
-          name: "whole_space_capacity_items",
-          label: "Capacity Items",
+          name: "divided_space_capacity_items",
+          label: "Divided capacity Items",
           list: true,
           ui: {
             itemProps: (item) => {

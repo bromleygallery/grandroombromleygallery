@@ -1,7 +1,7 @@
 ---
 permalink: /event-spaces/
 layout: event-spaces
-_template: event-spaces
+_template: eventspaces
 current_page: event-spaces
 main_space_group: The Grand Room
 shadred_temlate: grand-room

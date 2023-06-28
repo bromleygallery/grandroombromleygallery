@@ -1,7 +1,7 @@
 ---
 permalink: /bromley/event-spaces/
 layout: event-spaces-bromley
-_template: event-spaces-bromley
+_template: eventspaces
 current_page: event-spaces-bromley
 main_space_group: Bromley Gallery & Event Center
 shadred_temlate:  # when both The Grand Room & Event Spaces have same template

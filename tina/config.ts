@@ -37,7 +37,7 @@ export default defineConfig({
             fields: aboutFields(),
           },
           {
-            name: 'event-spaces',
+            name: 'eventspaces',
             label: 'Our Spaces page',
             fields: ourSpacesFields(),
           },
