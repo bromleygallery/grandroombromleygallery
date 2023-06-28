@@ -450,7 +450,7 @@ export function galleryFields() {
       list: true,
       ui: {
         itemProps: (item) => {
-          return { label: `${item?.title} `}
+          return { label: `${item?.description} `}
         },
       },
       fields: [
@@ -462,7 +462,7 @@ export function galleryFields() {
           list: true,
           ui: {
             itemProps: (item) => {
-              return { label: `${item?.title} `}
+              return { label: `${item?.alt} `}
             },
           },
           fields: [
