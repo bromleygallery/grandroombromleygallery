@@ -14,13 +14,13 @@ cover_image: "/assets/images/Bromley About cover.jpg"
 page_title: BROMLEY GALLERY
 
 
-  & EVENTS SPACES
+  & EVENTS
 first_section_image: '/assets/images/Bromley About image 1.jpg'
 first_section_title: BROMLEY GALLERY
-first_section_text: Our objective is to create a limitless atmosphere where guest feel free to connect with each other. A place where memories can be lived, history can be written and togetherness will be celebrated.
+first_section_text: Our objective is to create an atmosphere where guest feel free to connect with each other. A place where memories can be lived, and togetherness will be celebrated.
 
 
-  A bold, dynamic and limitless venue that elaborates with a network of trendy, innovative and energetic Melbourne professionals. The ambition is to unfold a authentic voice in the event industry, exploring and surprising with its guests by using our knowledge, creativity, don’t hold-back attitude and our passion for quality food and high end service.
+  A bold and dynamic venue that explores the works of David Bromley, an innovative and energetic artist. This space is ever-evolving with bursts of culture and colour this space is perfect for your next cocktail event or intimate dinner.
 
 second_section_image: '/assets/images/Bromley About image 2.jpg'
 food_title:  The Food

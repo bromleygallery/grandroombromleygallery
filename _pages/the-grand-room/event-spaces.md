@@ -37,31 +37,8 @@ list_of_rooms:
         number: 150
     room_link_image: '/assets/images/Grand Room Floorplan.png'
     room_link_text: Floorplan
-  - room_name:  The Chapel Room
-    room_text:  >-
-      Overlooking Chapel Street the Chapel Room is the perfect space to add in natural light to your event! 
 
 
-      This space can be divided to allow for an open cocktail area or a private exclusive sit down meal.
-    room_image: "/assets/images/Grand room event spaces chapel room.jpg"
-    whole_space_capacity_title: Capacities
-    whole_space_capacity_items: 
-      - name: COCKTAIL
-        number: NA
-      - name: THEATRE
-        number: 25
-      - name: RECTANGLE
-        number: 40
-    divided_space_capacity_title: Divided space capacity
-    divided_space_capacity_items:
-      - name: COCKTAIL
-        number: NA
-      - name: THEATRE
-        number: 25
-      - name: RECTANGLE
-        number: 20
-    room_link_image: '/assets/images/Chapel Room Floorplan.png'
-    room_link_text: Floorplan
   - room_name:  The Toorak Room
     room_text:  >-
       This room comprises of the Chapel Room and adds additional space perfect for your next cocktail party!
@@ -72,13 +49,40 @@ list_of_rooms:
     whole_space_capacity_title: Capacities
     whole_space_capacity_items: 
       - name: COCKTAIL
-        number: 40
+        number: 50
       - name: THEATRE
         number: 70
-      - name: RECTANGLE
+      - name: SEATED
         number: 40
     room_link_image: '/assets/images/Toorak Room Floorplan.png'
     room_link_text: Floorplan
+
+  - room_name:  The Chapel Room
+    room_text:  >-
+      Overlooking Chapel Street the Chapel Room is the perfect space to add in natural light to your event! 
+
+
+      This space can be divided to allow for an open cocktail area or a private exclusive sit down meal.
+    room_image: "/assets/images/Grand room event spaces chapel room.jpg"
+    whole_space_capacity_title: Capacities
+    whole_space_capacity_items: 
+      - name: COCKTAIL
+        number: 40
+      - name: THEATRE
+        number: 70
+      - name: SEATED
+        number: 40
+    divided_space_capacity_title: Divided space capacity
+    divided_space_capacity_items:
+      - name: COCKTAIL
+        number: NA
+      - name: THEATRE
+        number: 25
+      - name: SEATED
+        number: 20
+    room_link_image: '/assets/images/Chapel Room Floorplan.png'
+    room_link_text: Floorplan
+
 
 activate_slider: true
 slider_images: 
@@ -90,10 +94,6 @@ slider_images:
     alt_text: 'Slider image 3'
   - image: '/assets/images/Grand Room Event Spaces Cover.jpg' 
     alt_text: 'Slider image 4'
-  - image: '/assets/images/Bromley About image 2.jpg' 
-    alt_text: 'Slider image 5'
-  - image: '/assets/images/Bromley About image 1.jpg' 
-    alt_text: 'Slider image 6'
 ---
 
 

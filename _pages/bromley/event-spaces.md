@@ -13,7 +13,8 @@ meta_description: From weddings, corporate events,  birthday parties, private d
 cover_image: "/assets/images/Grand Room Event Spaces Cover.jpg"
 page_title: EVENT SPACE
 text_below_cover_image: >-
-  Bromley & Co Gallery welcomes your next event to be situated in an operating art gallery. The gallery’s high ceilings command a feeling of spaciousness while its walls are adorned with the unmistakable works of David Bromley. Striking handmade chandeliers and mood-enhancing lighting illuminate the gallery, offering the perfect setting for more intimate celebrations and those seeking a truly extraordinary space.
+  Hosting intimate dinners, corporate lunches and your next networking event, this imaginative and versatile space is sure to offer a spectacular setting for any occasion.
+  The venue’s breathtaking decor features striking light fixtures and walls adorned with original art by David Bromley. Host your event in this ever-evolving space!
 
 room_name: Bromley Gallery
 room_text:  >-
@@ -22,10 +23,10 @@ room_text:  >-
   
   The venue’s breathtaking decor features striking light fixtures and walls adorned with original art by David Bromley. Host your event in this ever-evolving space!
 room_image: '/assets/images/Bromley event spaces Bromley gallery.jpg'
-whole_space_capacity_title: Capacities
+whole_space_capacity_title: Capacity
 whole_space_capacity_items: 
   - name: COCKTAIL
-    number: 250
+    number: 120
   - name: SEATED
     number: 60
 
