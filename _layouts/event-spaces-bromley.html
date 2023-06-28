@@ -20,43 +20,48 @@
     </div>
   </div>
 
-  <div class="room-card w-full md:w-3/5 mx-auto my-20 section mb-8 reveal">
-    <h2 class="room-title mb-8 reveal"> {{ page.room_name }} </h2>
-    <div class="room-text mb-6 px-4 md:px-10 reveal"> {{ page.room_text | markdownify }} </div>
+  {% for room in page.list_of_rooms %}
+    <div class="room-card w-full md:w-3/5 mx-auto my-20 section mb-8 reveal">
+      <h2 class="room-title mb-8 reveal"> {{ room.room_name }} </h2>
+      <div class="room-text mb-6 px-4 md:px-10 reveal"> {{ room.room_text | markdownify }} </div>
 
-    <div class="room-image px-4 md:px-10 mt-6 md:mt-8 mb-16 md:mb-16 w-full">
-      <img src="{{ page.room_image }}" alt="Event Spaces {{ room.room_name }}" class="reveal">
-    </div>
-
-    {% if room.whole_space_capacity_title %}
-    <div class="w-full md:w-1/2">
-      <h4 class="text-center mb-6 reveal">{{room.whole_space_capacity_title}}</h4>
-      <div class="reveal">
-        {% for item in room.whole_space_capacity_items %}
-        <div class="capacity-box flex items-center justify-center mb-6 gap-x-8 reveal">
-          <div class="capacity-name">{{ item.name }}</div>
-          <div class="capacity-number flex items-center justify-center">{{ item.number }}</div>
-        </div>
-        {% endfor %}
+      <div class="room-image px-4 md:px-10 mt-6 md:mt-8 mb-16 md:mb-16 w-full">
+        <img src="{{ room.room_image }}" alt="Event Spaces {{ room.room_name }}" class="reveal">
       </div>
-    </div>
-    {% endif %}
 
-    <div class="section-text-info w-full md:w-1/2 mx-auto">
-      {% if page.whole_space_capacity_title %}
-      <h4 class="text-center mb-6 reveal">{{page.whole_space_capacity_title}}</h4>
-      <div class="reveal md:mt-6">
-        {% for item in page.whole_space_capacity_items %}
-        <div class="capacity-box flex items-center justify-center mb-6 gap-x-8 reveal">
-          <div class="capacity-name md:mb-4">{{ item.name }}</div>
-          <div class="capacity-number flex items-center justify-center">{{ item.number }}</div>
+      {% if room.divided_space_capacity_title %}
+      <div class="w-full md:w-1/2">
+        <h4 class="text-center mb-6 reveal">{{room.divided_space_capacity_title}}</h4>
+        <div class="reveal">
+          {% for item in room.whole_space_capacity_items %}
+            {% if item.name %}
+              <div class="capacity-box flex items-center justify-center mb-6 gap-x-8 reveal">
+                <div class="capacity-name">{{ item.name }}</div>
+                <div class="capacity-number flex items-center justify-center">{{ item.number }}</div>
+              </div>
+            {% endif %}
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
       {% endif %}
-    </div>
-  </div>
 
+      <div class="section-text-info w-full md:w-1/2 mx-auto">
+        {% if room.whole_space_capacity_title %}
+        <h4 class="text-center mb-6 reveal">{{ room.whole_space_capacity_title}}</h4>
+        <div class="reveal md:mt-6">
+          {% for item in room.whole_space_capacity_items %}
+            {% if item.name %}
+              <div class="capacity-box flex items-center justify-center mb-6 gap-x-8 reveal">
+                <div class="capacity-name md:mb-4">{{ item.name }}</div>
+                <div class="capacity-number flex items-center justify-center">{{ item.number }}</div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
 
   {% if page.activate_slider %}
   <div class="event-space-swiper-container px-4 mb-10">

@@ -16,19 +16,20 @@ text_below_cover_image: >-
   Hosting intimate dinners, corporate lunches and your next networking event, this imaginative and versatile space is sure to offer a spectacular setting for any occasion.
   The venue’s breathtaking decor features striking light fixtures and walls adorned with original art by David Bromley. Host your event in this ever-evolving space!
 
-room_name: Bromley Gallery
-room_text:  >-
-  From weddings, corporate events, media and product launches, birthday parties, private dinners and anything in between, our imaginative and versatile spaces can be transformed to offer a spectacular setting for any occasion. 
-  
-  
-  The venue’s breathtaking decor features striking light fixtures and walls adorned with original art by David Bromley. Host your event in this ever-evolving space!
-room_image: '/assets/images/Bromley event spaces Bromley gallery.jpg'
-whole_space_capacity_title: Capacity
-whole_space_capacity_items: 
-  - name: COCKTAIL
-    number: 120
-  - name: SEATED
-    number: 60
+list_of_rooms:
+  - room_name: Bromley Gallery
+    room_text:  >-
+      From weddings, corporate events, media and product launches, birthday parties, private dinners and anything in between, our imaginative and versatile spaces can be transformed to offer a spectacular setting for any occasion. 
+      
+      
+      The venue’s breathtaking decor features striking light fixtures and walls adorned with original art by David Bromley. Host your event in this ever-evolving space!
+    room_image: '/assets/images/Bromley event spaces Bromley gallery.jpg'
+    whole_space_capacity_title: Capacity
+    whole_space_capacity_items: 
+      - name: COCKTAIL
+        number: 120
+      - name: SEATED
+        number: 60
 
 activate_slider: false
 slider_images: 

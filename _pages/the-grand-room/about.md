@@ -19,7 +19,7 @@ page_title: WELCOME TO SOUTH YARRA’S
 first_section_image: '/assets/images/The Grand Room About image 1.jpg'
 above_title_first_section: Presenting..
 first_section_title: The Grand Room
-first_section_text: Welcome to South Yarra’s newest playground. Located in the prestigious Capitol Grand, our       sophisticated space offers limitless opportunities to create one-of-a-kind experiences.
+first_section_text: Welcome to South Yarra’s newest playground. Located in the prestigious Capitol Grand, our sophisticated space offers limitless opportunities to create one-of-a-kind experiences.
 
 
   Our ambition is to use our knowledge, creativity & passion for quality and high-end service to provide our guests with innovative & tailored events. From intimate birthday celebrations to opulent weddings, memorable meetings and lively cocktail parties, and everything in between.

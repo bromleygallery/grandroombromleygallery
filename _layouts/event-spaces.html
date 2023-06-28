@@ -44,10 +44,12 @@
             <h4 class="text-center mb-6 reveal">{{room.whole_space_capacity_title}}</h4>
             <div class="reveal">
               {% for item in room.whole_space_capacity_items %}
-              <div class="capacity-box flex items-center justify-between mb-6 reveal">
-                <div class="capacity-name">{{ item.name }}</div>
-                <div class="capacity-number flex items-center justify-center">{{ item.number }}</div>
-              </div>
+                {% if item.name %}
+                  <div class="capacity-box flex items-center justify-between mb-6 reveal">
+                    <div class="capacity-name">{{ item.name }}</div>
+                    <div class="capacity-number flex items-center justify-center">{{ item.number }}</div>
+                  </div>
+                {% endif %}
               {% endfor %}
             </div>
           </div>
@@ -58,10 +60,12 @@
             <h4 class="text-center mb-6 reveal">{{room.divided_space_capacity_title}}</h4>
             <div class="reveal">
               {% for item in room.divided_space_capacity_items %}
-              <div class="capacity-box flex items-center justify-between mb-6 reveal">
-                <div class="capacity-name">{{ item.name }}</div>
-                <div class="capacity-number flex items-center justify-center">{{ item.number }}</div>
-              </div>
+                {% if item.name %}
+                <div class="capacity-box flex items-center justify-between mb-6 reveal">
+                  <div class="capacity-name">{{ item.name }}</div>
+                  <div class="capacity-number flex items-center justify-center">{{ item.number }}</div>
+                </div>
+                {% endif %}
               {% endfor %}
             </div>
           </div>
@@ -82,7 +86,7 @@
   </div>
 
   {% if page.activate_slider %}
-  <div class="event-space-swiper-container px-4 mb-16">
+  <div class="event-space-swiper-container px-4 mb-24">
     <div class="swiper event-space-swiper">
       <div class="swiper-wrapper mb-2">
         {% for image in page.slider_images %}
