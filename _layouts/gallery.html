@@ -28,8 +28,8 @@
       {% endif %}
         
       {% for image in images_group.images %}
-        <div class="image-box reveal"> 
-          <img src="{{ image.path }}" alt="{{ image.alt }}">
+        <div class="image-box image-for-popup"> 
+          <img src="{{ image.path }}" alt="{{ image.alt }}" class="cursor-pointer" data-image-url="{{ image.path }}" data-image-alt="{{ image.alt }}">
         </div>
       {% endfor %}
       </div>
@@ -37,6 +37,23 @@
   </div>
 </main>
 
+
+<div id="imageBoxPopup" class="fixed top-0 bottom-0 right-0 left-0 hidden" style="background-color: rgba(0,0,0,0.8)">
+  <div id="imageBoxPopupBck" class="relative h-full flex items-center justify-center">
+    <div id="imageBoxPopupBox" class="relative ">
+      <img src="" alt="" class="popup-box-image">
+
+      <!-- close Popup -->
+      <div id="closePopup" class="absolute top-0 right-0 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 cursor-pointer" fill="none" viewBox="0 0 24 24"
+          stroke="#fff" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

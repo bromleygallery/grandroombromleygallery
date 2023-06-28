@@ -25,10 +25,10 @@ first_section_text: Our objective is to create a limitless atmosphere where gues
 second_section_image: '/assets/images/Bromley About image 2.jpg'
 food_title:  The Food
 food_text:  >-
-  Our expert chefs have curated menus that are versatile and abundant with a focus on quality Victorian produce. We take pride in our commitment to using only the best the region has to offer, and we work directly with local farmers & growers to ensure we honour the seasonality of produce. Led by our Culinary Director, your event is in impeccably experienced and imaginative hands. Allow our creative team to realise your wildest imagination and compose menus to complement any event.
+  Our expert chefs have curated menus that are versatile and abundant with a focus on quality Victorian produce. We take pride in our commitment to using only the best the region has to offer, and we work directly with local farmers & growers to ensure we honour the seasonality of produce. Led by our Culinary Director, your event is in impeccably experienced and imaginative hands.
 person_proffesion: Culinary Director
 person_name: Stephen Nairn
-person_image: /img/stephen_nairn.png
+person_image: /assets/images/stephen_nairn.png
 testimonial_text: >-
   Hailing from Scotland, Stephen’s Nairn’s 20-year career in the Hospitality industrybegan at home, where he honed his skills in renowned European kitchens before receiving a scholarship to work at Eleven Madison Park in New York. Intrigued by Melbourne's dining scene, he made Australia his home, rising to Executive Chef at Vue de Monde and later serving as Head Chef at Estelle by Scott Pickett.
   

@@ -22,15 +22,15 @@
 
     {% if index == 0 %}
       <div class="flex flex-col-reverse md:flex-row items-center justify-between">
-        <div class="w-full md:w-1/2 experience-section-image reveal-left mb-8">
+        <div class="w-full md:w-1/2 experience-section-image mb-8 md:mb-0"> <!-- reveal-left -->
     {% else %}
       <div class="flex flex-col-reverse md:flex-row-reverse items-center justify-between"> 
-        <div class="w-full md:w-1/2 experience-section-image reveal-right mb-8">
+        <div class="w-full md:w-1/2 experience-section-image mb-8 md:mb-0"> <!-- reveal-right -->
     {% endif %}
         <img class="w-full" src="{{experience.img}}" alt="{{ experience.title }}">
       </div>
       <div class="w-full md:w-1/2 flex items-center justify-center my-16 md:my-0">
-        <div class="p-0 md:p-24">
+        <div class="p-0 md:px-24">
           <h2 class="experience-title mb-10 reveal">{{ experience.title }}</h2>
           <div class="experience-text mb-16 reveal">{{ experience.text | markdownify }}</div>
           {% if experience.button_text %}

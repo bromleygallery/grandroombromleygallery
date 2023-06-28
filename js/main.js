@@ -45,6 +45,37 @@ import SmoothScroll from './smoothScroll.js'
     });
   }
 
+  if(document.querySelector('.image-for-popup')) {
+    const imageBoxPopup = document.getElementById('imageBoxPopup')
+    const popupBoxImage = document.querySelector('.popup-box-image')
+
+    const images = document.querySelectorAll('.image-for-popup')
+
+    const imagesArray = Array.from(images)
+    imagesArray.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault()
+        const imageUrl = e.target.dataset.imageUrl
+        const imageAlt = e.target.dataset.imageAlt
+        
+        popupBoxImage.src = imageUrl
+        popupBoxImage.alt = imageAlt
+
+        imageBoxPopup.classList.remove('hidden')
+      })
+    })
+
+    document.querySelector('#imageBoxPopup').addEventListener('click', (e) => {
+      if (e.target.id == document.querySelector('#imageBoxPopupBck').id)
+        imageBoxPopup.classList.add('hidden')
+    })
+
+    document.querySelector('#closePopup').addEventListener('click', (e) => {
+      imageBoxPopup.classList.add('hidden')
+    })
+
+  }
+
 
 
   // add animations to lines
@@ -103,8 +134,8 @@ import SmoothScroll from './smoothScroll.js'
 
   }
   else {
-    document.body.addEventListener('onload', init())
-
+      document.body.addEventListener('onload', init())
+    
   }
 
   

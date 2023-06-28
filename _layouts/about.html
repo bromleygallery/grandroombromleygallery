@@ -18,7 +18,7 @@
 
 <main class="px-4 md:px-0">
   <div class="flex flex-col-reverse md:flex-row items-center justify-between mb-20 md:mb-0">
-    <div class="w-full md:w-1/2 about-section-image reveal-left">
+    <div class="w-full md:w-1/2 about-section-image">
       <img class="w-full" src="{{page.first_section_image}}" alt="{{ page.above_title_first_section }}">
     </div>
     <div class="w-full md:w-1/2 flex items-center justify-center mb-16 md:mb-0">
@@ -27,7 +27,7 @@
           <h4 class="above-title mb-8 md:mb-16 text-center reveal">{{ page.above_title_first_section }}</h4>
         {% endif %}
         <h2 class="first-section-title mb-10 reveal">{{ page.first_section_title }}</h2>
-        <div class="first-section-text mb-12 md:mb-16 reveal">{{ page.first_section_text | markdownify }}</div>
+        <div class="first-section-text mb-12 md:mb-16 px-0 md:px-8 reveal">{{ page.first_section_text | markdownify }}</div>
         {% if page.first_section_link_url %}
         <div class="text-center reveal">
           <a href="{{page.first_section_link_url}}" class="first-section-link">
@@ -40,13 +40,13 @@
     </div>
   </div>
   <div class="flex flex-col-reverse md:flex-row-reverse items-center justify-between">
-    <div class="w-full md:w-1/2 about-section-image reveal-right">
+    <div class="w-full md:w-1/2 about-section-image">
       <img class="w-full" src="{{page.second_section_image}}" alt="">
     </div>
     <div class="w-full md:w-1/2 flex items-center justify-center">
-      <div class="p-0 md:px-8 xl:px-12 2xl:px-20">
+      <div class="p-0 md:px-8 xl:px-20">
         <h2 class="section-title reveal mb-4"> {{ page.food_title }} </h2>
-        <div class="section-text reveal mb-10 lg:mb-20 2xl:mb-40 mb-8">
+        <div class="section-text reveal mb-10 lg:mb-24 2xl:mb-40 mb-8">
           {{ page.food_text | markdownify}}
         </div>
         

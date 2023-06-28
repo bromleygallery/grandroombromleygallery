@@ -22,7 +22,7 @@ room_text:  >-
   
   The venue’s breathtaking decor features striking light fixtures and walls adorned with original art by David Bromley. Host your event in this ever-evolving space!
 room_image: '/assets/images/Bromley event spaces Bromley gallery.jpg'
-whole_space_capacity_title: Whole space capacity
+whole_space_capacity_title: Capacities
 whole_space_capacity_items: 
   - name: COCKTAIL
     number: 250

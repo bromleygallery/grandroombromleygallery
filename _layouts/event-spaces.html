@@ -67,13 +67,22 @@
           </div>
           {% endif %}
         </div>
+
+        {% if room.room_link_image %}
+          <div class="mt-8 mb-4 text-center">
+            <div class="room-link cursor-pointer reveal image-for-popup" data-image-url="{{ room.room_link_image }}" data-image-alt="{{ room.room_name }}">
+              {{ room.room_link_text }}
+              <div class="underline-animation"></div>
+            </div>
+          </div>
+        {% endif %}
       </div>
       {% endfor %}
     </div>
   </div>
 
   {% if page.activate_slider %}
-  <div class="event-space-swiper-container px-4 mb-10">
+  <div class="event-space-swiper-container px-4 mb-16">
     <div class="swiper event-space-swiper">
       <div class="swiper-wrapper mb-2">
         {% for image in page.slider_images %}
@@ -89,6 +98,24 @@
   </div>
   {% endif %}
 </main>
+
+
+<div id="imageBoxPopup" class="fixed top-0 bottom-0 right-0 left-0 hidden" style="background-color: rgba(0,0,0,0.9)">
+  <div id="imageBoxPopupBck" class="relative h-full flex items-center justify-center">
+    <div id="imageBoxPopupBox" class="relative ">
+      <img src="" alt="" class="popup-box-image">
+
+      <!-- close Popup -->
+      <div id="closePopup" class="absolute top-0 right-0 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 cursor-pointer" fill="none" viewBox="0 0 24 24"
+          stroke="#62765e" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 {% include footer.html %}
