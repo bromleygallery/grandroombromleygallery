@@ -1,4 +1,51 @@
 import type { TinaField } from "tinacms";
+
+export function indexFields() {
+  return [
+    {
+      type: "string",
+      name: "layout",
+      label: "layout",
+      ui: {
+        component: () => null
+      }
+    },
+    {
+      type: "string",
+      name: "permalink",
+      label: "Permalink",
+      ui: {
+        component: () => null
+      }
+    },
+    {
+      type: "string",
+      name: "meta_description",
+      label: "Meta Description (up to 160 characters)",
+    },
+    {
+      type: "image",
+      name: "grand_room_img",
+      label: "Grand Room Image",
+    },
+    {
+      type: "image",
+      name: "broomly_img",
+      label: "Bromley Image",
+    },
+    {
+      type: "image",
+      name: "grand_room_logo",
+      label: "Grand Room Logo",
+    },
+    {
+      type: "image",
+      name: "broomly_logo",
+      label: "Bromley Logo",
+    },
+    
+  ] as TinaField[];
+}
 export function aboutFields() {
   return [
     {

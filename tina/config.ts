@@ -1,4 +1,5 @@
 import { defineConfig } from "tinacms";
+import { indexFields } from "./templates";
 import { aboutFields } from "./templates";
 import { ourSpacesFields } from "./templates";
 import { experiencesFields } from "./templates";
@@ -31,6 +32,11 @@ export default defineConfig({
         path: '_pages',
         format: 'md',
         templates: [
+          {
+            name: 'landing',
+            label: 'Home page',
+            fields: indexFields(),
+          },
           {
             name: 'about',
             label: 'About page',
