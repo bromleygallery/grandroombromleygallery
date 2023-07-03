@@ -262,7 +262,7 @@ nav.open {
 .navigation .menu-item a{
   font-family: Span Compressed;
   font-size: 48px;
-  font-weight: 600;
+  /* font-weight: 600; */
   line-height: 48px;
   letter-spacing: 0em;
   text-align: center;
@@ -414,11 +414,11 @@ nav.open {
   transform: translate(-50%, 50%);
 }
 .cover-text h1{
-  font-family: 'Frunchy';
+  font-family: Span Compressed;
   font-style: normal;
   font-weight: 400;
-  font-size: 128px;
-  line-height: 80px;
+  font-size: 90px;
+  line-height: 90px;
   text-transform: uppercase;
   text-align: center;
   color: var(--white);
@@ -550,7 +550,7 @@ nav.open {
 #about .section-title {
   font-family: Span Compressed;
   font-size: 48px;
-  font-weight: 200;
+  /* font-weight: 200; */
   line-height: 58px;
   letter-spacing: 0em;
 }

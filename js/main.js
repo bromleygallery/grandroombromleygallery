@@ -138,9 +138,25 @@ import SmoothScroll from './smoothScroll.js'
     
   }
 
+  function transformTextToSpans() {
+    const h1Element = document.querySelector('h1');
+    const paragraphs = h1Element.querySelectorAll('p');
+  
+    paragraphs.forEach((paragraph) => {
+      const text = paragraph.textContent;
+      const transformedText = text.replace(/&|-/g, (match) => {
+        return match === '&' ? '<span style="font-family:Frunchy; font-size: 128px">&</span>' : '<span style="font-family:Frunchy; font-size: 128px">-</span>';
+      });
+  
+      paragraph.innerHTML = transformedText;
+    });
+  }
+
+
   
 
   window.onload = () => {
-    window.scrollTo(0, 0);
+    transformTextToSpans()
+    window.scrollTo(0, 0)
   }
 })()
