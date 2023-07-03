@@ -145,7 +145,12 @@ import SmoothScroll from './smoothScroll.js'
     paragraphs.forEach((paragraph) => {
       const text = paragraph.textContent;
       const transformedText = text.replace(/&|-/g, (match) => {
-        return match === '&' ? '<span style="font-family:Frunchy; font-size: 128px">&</span>' : '<span style="font-family:Frunchy; font-size: 128px">-</span>';
+        if(screen.width < 1028) {
+          return match === '&' ? '<span style="font-family:Frunchy; font-size: 72px">&</span>' : '<span style="font-family:Frunchy; font-size:72px">-</span>';
+        }
+        else {
+          return match === '&' ? '<span style="font-family:Frunchy; font-size: 128px">&</span>' : '<span style="font-family:Frunchy; font-size: 128px">-</span>';
+        }
       });
   
       paragraph.innerHTML = transformedText;
@@ -157,6 +162,8 @@ import SmoothScroll from './smoothScroll.js'
 
   window.onload = () => {
     transformTextToSpans()
-    window.scrollTo(0, 0)
+    if(!document.body.classList.contains('contact')) {
+      window.scrollTo(0, 0)
+    }
   }
 })()

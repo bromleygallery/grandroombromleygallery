@@ -1005,9 +1005,9 @@ body.contact .section-text p {
     width: 36px;
   }
   .navigation .menu-item a {
-    font-size: 28px;
-    line-height: 28px;
-    margin: 8px 0;
+    font-size: 32px;
+    line-height: 32px;
+    margin: 6px 0;
   }
 
   .burger-line {
@@ -1076,8 +1076,8 @@ body.contact .section-text p {
     width: 100%;
   }
   #about .cover-text h1 {
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 48px;
+    line-height: 52px;
   }
 
   .section-title {
@@ -1116,8 +1116,13 @@ body.contact .section-text p {
 
   /*   E X P E R I E N C E S   */
    .cover-text h1 {
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 48px;
+    line-height: 52px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .experiences .cover-text {
+    transform: translate(-50%, -50%);
   }
 
 
