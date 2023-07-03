@@ -14,21 +14,21 @@ cover_image: "/assets/images/Bromley Experiences Cover image.jpg"
 page_title: YOUR EXPERIENCE
 
 experiences:
-  # - title: Weddings 
-  #   img: /assets/images/Bromley Experiences Weddings.jpg
-  #   text: >-
-  #     We want nothing more than to bring your special day to life, celebrate your individuality and create memories for your guests. 
+  - title: Weddings 
+    img: /assets/images/Bromley Experiences Weddings.jpg
+    text: >-
+      We want nothing more than to bring your special day to life, celebrate your individuality and create memories for your guests. 
       
       
-  #     We believe no two weddings should ever be the same. 
+      We believe no two weddings should ever be the same. 
       
       
-  #     Our space allows for a range of entertainment, innovative food stations, floral installations and a dance floor. Work alongside our experienced event planners who have established relationships with a wide network within the industry, including the finest DJ’s, musicians and talented photographers, to ensure that every aspect of your wedding is exceptional.
+      Our space allows for a range of entertainment, innovative food stations, sit down or cocktail events. Work alongside our experienced event planners who have established relationships with a wide network within the industry, including the finest DJ’s, musicians and talented photographers, to ensure that every aspect of your wedding is exceptional.
       
       
-  #     Our kitchen team can work with you to create an elevated menu that tells your unique story, incorporating seasonal produce. We are committed to creating a menu that is as meaningful as it is delicious. Cocktails are on point and our extensive wine cellar offers a wide range suited to all tastes.
-  #   button_link: '/bromley/contact/'
-  #   button_text: Enquire Now
+      Our kitchen team can work with you to create an elevated menu that tells your unique story, incorporating seasonal produce. We are committed to creating a menu that is as meaningful as it is delicious. Cocktails are on point and our extensive wine cellar offers a wide range suited to all tastes.
+    button_link: '/bromley/contact/'
+    button_text: Enquire Now
   - title: Corporate 
     img: /assets/images/Bromley Experiences Corporate.jpg
     text: >-

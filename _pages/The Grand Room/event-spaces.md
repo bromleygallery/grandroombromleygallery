@@ -6,6 +6,7 @@ current_page: event-spaces
 main_space_group: The Grand Room
 shadred_temlate: grand-room
 header: grand_room
+is_event_space_page: true
 
 meta_description_title: Event Spaces
 meta_description: From weddings, corporate events,  birthday parties, private dinners and anything in between, ourimaginative and versatile spaces can be transformed for any occasion.
@@ -27,7 +28,7 @@ list_of_rooms:
 
       With wrap around views and ability to create two intimate spaces within the venue, the possibilities for your event are endless.
     room_image: '/assets/images/Grand room event spaces grand room.jpg'
-    whole_space_capacity_title: Capacities
+    whole_space_capacity_title: Capacity
     whole_space_capacity_items: 
       - name: COCKTAIL
         number: 250
@@ -46,7 +47,7 @@ list_of_rooms:
 
       With wrap around windows this space allows for view out onto Chapel Street and Toorak Road. The room is divided with the use of velvet curtains creating an intimate luxe feel to the space.
     room_image: "/assets/images/Grand room event spaces toorak room.jpg"
-    whole_space_capacity_title: Capacities
+    whole_space_capacity_title: Capacity
     whole_space_capacity_items: 
       - name: COCKTAIL
         number: 50
@@ -64,7 +65,7 @@ list_of_rooms:
 
       This space can be divided to allow for an open cocktail area or a private exclusive sit down meal.
     room_image: "/assets/images/Grand room event spaces chapel room.jpg"
-    whole_space_capacity_title: Capacities
+    whole_space_capacity_title: Capacity
     whole_space_capacity_items: 
       - name: COCKTAIL
         number: 40
@@ -72,14 +73,7 @@ list_of_rooms:
         number: 70
       - name: SEATED
         number: 40
-    divided_space_capacity_title: Divided space capacity
-    divided_space_capacity_items:
-      - name: COCKTAIL
-        number: NA
-      - name: THEATRE
-        number: 25
-      - name: SEATED
-        number: 20
+    
     room_link_image: '/assets/images/Chapel Room Floorplan.png'
     room_link_text: Floorplan
 

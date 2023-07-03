@@ -5,12 +5,13 @@ _template: eventspaces
 current_page: event-spaces-bromley
 main_space_group: Bromley Gallery & Event Center
 shadred_temlate:  # when both The Grand Room & Event Spaces have same template
+is_event_space_page: true
 
 meta_description_title: Event Spaces
 meta_description: From weddings, corporate events,  birthday parties, private dinners and anything in between, ourimaginative and versatile spaces can be transformed for any occasion.
 
 
-cover_image: "/assets/images/Grand Room Event Spaces Cover.jpg"
+cover_image: "/assets/images/Bromley Event Spaces Cover.jpg"
 page_title: EVENT SPACE
 text_below_cover_image: >-
   Hosting intimate dinners, corporate lunches and your next networking event, this imaginative and versatile space is sure to offer a spectacular setting for any occasion.
